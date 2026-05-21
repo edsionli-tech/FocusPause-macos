@@ -1,0 +1,292 @@
+/* Language */
+"lang.system" = "システムに合わせる";
+"lang.english" = "英語";
+"lang.chinese_simplified" = "簡体字中国語";
+"lang.spanish" = "スペイン語";
+"lang.english_india" = "英語（インド）";
+"lang.french" = "フランス語";
+"lang.japanese" = "日本語";
+"lang.russian" = "ロシア語";
+"lang.korean" = "韓国語";
+
+/* Settings — General */
+"settings.general.reset.confirm" = "リセット";
+
+/* Settings — Data (compact rows) */
+"settings.data.row.todos.title" = "より古い Todo を削除する";
+"settings.data.row.usage.title" = "より古い使用状況アーカイブを削除します";
+"settings.data.row.action" = "取り除く";
+"settings.data.retention.picker.a11y" = "締め切り時間";
+
+/* Settings */
+"settings.section.general" = "一般とアラート";
+"settings.section.dnd" = "邪魔しないでください";
+"settings.section.tasks" = "タスク";
+"settings.section.data" = "データ管理";
+"settings.section.about" = "について";
+"settings.language" = "言語";
+"settings.launch_at_login" = "ログイン時に起動";
+"settings.show_menubar" = "メニューバーアイコンを表示";
+"settings.work_duration" = "集中期間";
+"settings.break_duration" = "休憩時間";
+"settings.break_overlay_style" = "全画面ブレークスタイル";
+"settings.break_overlay_hint" = "「Disguise」はデスクトップを暗くします (マウスが通過します)。つや消しカードのみがクリックを受け取ります。折りたたむとスリムなストリップになります。";
+"settings.reminder_sound" = "リマインダー音";
+"reminder.sound.system" = "システムのデフォルト";
+"reminder.sound.gentle" = "優しいチャイム";
+"reminder.sound.none" = "静けさ";
+"settings.dnd.mode" = "サイレントモード";
+"settings.dnd.sync_focus" = "macOS フォーカスと同期する";
+"settings.dnd.auto_pause_meetings" = "会議中にリマインダーを自動一時停止する";
+"settings.dnd.apps" = "アプリを妨害する";
+"settings.dnd.times" = "妨害時間範囲";
+"settings.dnd.footer" = "将来のバージョンでは、カレンダーや実行中のアプリと連携して、プレゼンテーションや会議をスキップできるようになります。";
+"settings.tasks.export_title" = "ローカルの Todo をエクスポートする";
+"settings.tasks.export_hint" = "期限の範囲 (今日の前後最大 1 年) を選択し、Markdown、PDF、または Excel 用の CSV として保存します。長期的な Todo (日付 9999-12-31) が常に含まれます。";
+"settings.tasks.export.start_date" = "開始日";
+"settings.tasks.export.end_date" = "終了日";
+"settings.tasks.export.format" = "形式";
+"settings.tasks.export.format.markdown" = "マークダウン (.md)";
+"settings.tasks.export.format.pdf" = "PDF (.pdf)";
+"settings.tasks.export.format.csv_excel" = "Excel CSV (.csv、UTF-8)";
+"settings.tasks.export.button" = "輸出…";
+"settings.tasks.export.panel.title" = "Todo をエクスポートする";
+"settings.tasks.export.panel.message" = "エクスポートを保存する場所を選択します。";
+"settings.tasks.categories_title" = "Todo カテゴリ";
+"settings.tasks.categories_hint" = "各行の丸印は、作業の種類をタグ付けします (上部の長期/今日/明日とは別に)。デフォルトには、仕事、生活、勉強、健康、レジャー、その他が含まれます。名前の変更、色の変更、追加または削除が可能です。";
+"settings.tasks.tab.details" = "タスクの詳細";
+"settings.tasks.tab.categories" = "カテゴリ管理";
+"settings.tasks.tab.picker_a11y" = "タスク管理ページ";
+"settings.tasks.period.week" = "今週";
+"settings.tasks.period.month" = "今月";
+"settings.tasks.period.custom" = "カスタム範囲";
+"settings.tasks.period.picker_a11y" = "期限の範囲";
+"settings.tasks.list_title" = "この期間の Todo";
+"settings.tasks.list_empty" = "この期間に一致する Todo はありません。";
+"settings.tasks.select_all" = "すべて選択";
+"settings.tasks.select_none" = "選択をクリア";
+"settings.tasks.export_selection_hint" = "今週、今月、またはカスタム範囲を選択します。以下で、一致する Todo をスクロールできます。表示されているものをすべてエクスポートするには、何もチェックしないままにしておきます。行をチェックして、それらの項目のみをエクスポートします。長期的な Todo は常にリストされ、ウィンドウをエクスポートするときに含まれます。";
+"settings.data.local_only" = "使用状況データをローカルのみに保持する";
+"settings.data.export_csv" = "今日の使用量をCSVでエクスポート";
+"settings.data.clear_usage" = "使用状況データをクリアする";
+"settings.data.reset" = "すべての設定をリセットする";
+"settings.data.tab.usage" = "アプリの使用状況の詳細";
+"settings.data.tab.settings" = "データ設定";
+"settings.data.tab.picker_a11y" = "データ管理ページ";
+"settings.data.usage.title" = "アプリケーションの使用法";
+"settings.data.usage.hint" = "この Mac に保存されている毎日の合計を週、月、またはカスタム範囲ごとに参照します。エクスポートでは、行ごとに日付、アプリ、秒、分を含む 1 つの CSV が生成されます。";
+"settings.data.usage.period.a11y" = "アーカイブされた使用期間";
+"settings.data.usage.list_title" = "この範囲内の毎日の合計";
+"settings.data.usage.empty" = "最近の使用記録はありません。";
+"settings.data.usage.export" = "CSV をエクスポート…";
+"settings.data.usage.export.panel.title" = "使用状況をCSVでエクスポート";
+"settings.data.usage.export.panel.message" = "CSV を保存する場所を選択します。";
+"settings.data.cleanup.todos.section" = "Todoのクリーンアップ";
+"settings.data.cleanup.usage.section" = "使用状況のクリーンアップ";
+"settings.data.cleanup.partial.title" = "古いデータを削除する";
+"settings.data.cleanup.retention_picker" = "より古い";
+"settings.data.cleanup.retention_hint" = "どこまで遡ってプルーニングするかを選択します。以下の両方のクリーンアップ ボタンでこのカットオフが使用されます。";
+"settings.data.cleanup.todos.run" = "古い Todo をクリア…";
+"settings.data.cleanup.usage.run" = "古い使用状況アーカイブをクリアします…";
+"settings.data.cleanup.todos.template" = "%@ までに期限が切れた Todo をクリアします";
+"settings.data.cleanup.usage.template" = "%@ の前に毎日の使用量をクリアします";
+"settings.data.age.week" = "1週間前";
+"settings.data.age.month" = "1ヶ月前";
+"settings.data.age.three_months" = "3ヶ月前";
+"settings.data.age.year" = "1年前";
+"settings.data.cleanup.all.section" = "すべてのタスクと使用状況データをクリアする";
+"settings.data.cleanup.all.button" = "すべての ToDo と使用状況データをクリアする";
+"settings.data.cleanup.all.footer" = "すべての ToDo と、アーカイブされた毎日のアプリケーションの使用状況 (今日を含む) をすべて削除します。設定はそのまま残ります。";
+"settings.data.danger.settings.section" = "設定";
+"settings.data.reset.footer" = "期間、言語、おやすみモード、タスクの設定などをデフォルトに戻します。Todo と使用状況のアーカイブは削除されません。";
+"settings.data.confirm.title" = "確認する";
+"settings.data.confirm.delete" = "消去";
+"settings.data.confirm.todos" = "期限が厳密に「%@」より前の Todo をすべて削除しますか?これを元に戻すことはできません。";
+"settings.data.confirm.usage" = "「%@」より前の暦日のアーカイブされた日次使用記録をすべて削除しますか?これを元に戻すことはできません。";
+"settings.data.confirm.all_data" = "この Mac 上のすべての ToDo とすべての毎日の使用状況のアーカイブを削除しますか?これを元に戻すことはできません。";
+"settings.data.confirm.reset_settings" = "FocusPause 設定をデフォルトにリセットしますか? Todo と使用状況のアーカイブは残ります。";
+"settings.about.title" = "フォーカスポーズについて";
+"settings.about.body" = "FocusPause は、フローとリカバリー (メニュー バー、全画面表示の休憩、使用状況の分析情報、ToDo) のための macOS アプリで、ナレッジ ワーカーが集中力と休息のバランスを取るのに役立ちます。";
+"settings.about.version" = "バージョン 1.0 · SwiftUI";
+"settings.about.feedback.intro" = "問題が発生した場合、またはご提案がある場合は、次のメールアドレスにご連絡ください (推奨):";
+"settings.about.feedback.email_link" = "edsionli99@gmail.com";
+
+/* Common */
+"common.ok" = "わかりました";
+"common.cancel" = "キャンセル";
+"common.selected" = "選択済み";
+"common.not_selected" = "未選択";
+"format.minutes_suffix" = "%d分";
+"format.slider.max_minutes" = "%d分";
+"format.timer_rule" = "集中 %d 分 · 休憩 %d 分";
+
+/* Focus / priority / DND */
+"focus.status.idle" = "アイドル状態";
+"focus.status.focusing" = "フォーカシング";
+"focus.status.resting" = "休憩中";
+"focus.status.paused" = "一時停止中";
+"priority.low" = "低い";
+"priority.normal" = "普通";
+"priority.high" = "高い";
+"dnd.picker.morning" = "朝";
+"dnd.picker.afternoon" = "午後";
+"dnd.picker.all_day" = "終日";
+"dnd.picker.off" = "オフ";
+"dnd.status.off" = "おやすみモードをオフにする";
+"dnd.status.morning" = "邪魔しないでください · 朝";
+"dnd.status.afternoon" = "邪魔しないでください · 午後";
+"dnd.status.all_day" = "邪魔しないでください · 一日中";
+
+/* Break overlay mode */
+"break.mode.standard" = "標準のフルスクリーン";
+"break.mode.disguise" = "変装（サイドバーカード）";
+
+/* Usage scope */
+"usage.scope.cycle" = "このサイクル";
+"usage.scope.today" = "今日";
+"usage.scope.cycle.panel" = "使い方・今回のサイクル";
+"usage.scope.today.panel" = "使い方・今日";
+"usage.scope.cycle.desc" = "このフォーカス サイクル中のアプリの使用状況";
+"usage.scope.today.desc" = "今日のアプリの使用状況";
+
+/* Dates */
+"day.today" = "今日";
+"day.long_term" = "長期";
+"day.long_term.calendar_chip" = "長期";
+"day.yesterday" = "昨日";
+"day.tomorrow" = "明日";
+"date.format.month_day" = "うーん";
+"date.format.full" = "yMMD";
+
+/* Todo categories (built-in) */
+"todo.cat.work" = "仕事";
+"todo.cat.life" = "人生";
+"todo.cat.study" = "勉強";
+"todo.cat.health" = "健康";
+"todo.cat.leisure" = "レジャー";
+"todo.cat.other" = "他の";
+
+/* Todo UI */
+"todo.list.title" = "トドス";
+"todo.empty_day" = "この日の ToDo はありません。日付を切り替えるか、下に追加してください。";
+"todo.placeholder" = "藤堂";
+"todo.empty_hint_popover" = "まだ ToDo がありません。日付を選択して下に追加してください。";
+"todo.empty_hint_overlay" = "まだ ToDo がありません。以下に追加してください。";
+"todo.add_root" = "+ ToDoを追加";
+"todo.add_child" = "+ サブタスクの追加 (戻るまたは追加)";
+"todo.cancel_child" = "サブタスクのキャンセル";
+"todo.add_button" = "追加";
+"todo.uncategorized" = "未分類";
+"todo.category.help" = "カテゴリを選択してください。上部のバーを使用して期日を設定します (長期/今日/明日、または日付を選択します)。";
+"todo.menu.add_sub" = "サブタスクの追加";
+"todo.menu.priority" = "サイクル優先度 (%@)";
+"todo.menu.category" = "カテゴリ";
+"todo.menu.due_date" = "期日";
+"todo.menu.due_long_term" = "長期 (9999-12-31)";
+"todo.menu.indent" = "サブタスクにインデントする";
+"todo.menu.outdent" = "ルートにアウトデント";
+"todo.menu.delete" = "消去";
+"todo.menu.delete_tree" = "タスクとサブタスクを削除する";
+"todo.menu.due_prev" = "一日前";
+"todo.menu.due_next" = "一日後";
+"todo.cal.hint" = "最大 15 日前の日付を選択できます。";
+"todo.export.doc_title" = "フォーカス一時停止のタスク";
+"todo.export.header.date" = "日付";
+"todo.export.header.title" = "藤堂";
+"todo.export.header.done" = "終わり";
+"todo.export.header.category" = "カテゴリ";
+"todo.export.header.priority" = "優先度";
+"todo.export.header.level" = "レベル";
+"todo.export.done.yes" = "はい";
+"todo.export.done.no" = "いいえ";
+"todo.export.level.root" = "根";
+"todo.export.level.subtask" = "サブタスク";
+"todo.cat.new" = "新しいカテゴリー";
+"todo.cat.name_placeholder" = "カテゴリ名";
+"todo.cat.add" = "カテゴリを追加";
+"todo.cat.delete_help_single" = "少なくとも 1 つのカテゴリを保持する";
+"todo.cat.delete_help" = "このカテゴリを削除します";
+"todo.cat.pick_color" = "色を選択してください";
+
+/* Popover */
+"popover.tagline" = "フローとリカバリー、思慮深い";
+"popover.break_now" = "休憩を取ってください";
+"popover.start_focus" = "フォーカスの開始";
+"popover.work_duration_menu" = "%d 分集中します";
+"popover.break_duration_menu" = "%d 分休憩";
+"popover.dnd_menu" = "邪魔しないでください";
+"popover.settings" = "設定";
+"popover.quit" = "やめる";
+
+/* Break overlay */
+"overlay.break_title" = "本格的な休憩を取る";
+"overlay.cmd_hint" = "⌘⌥W を押して作業に戻ります";
+"overlay.usage_picker" = "利用範囲";
+"overlay.usage_empty_today" = "今日の使用状況データはありません";
+"overlay.usage_empty_cycle" = "このサイクルの使用量データはありません";
+"overlay.confirm_return_title" = "今から仕事に戻りますか？";
+"overlay.confirm_return_cancel" = "キャンセル";
+"overlay.confirm_return_ok" = "仕事に戻る";
+"overlay.confirm_return_msg" = "これで現在の休憩が終了します。緊急時には ⌘⌥W を使用できます。";
+"overlay.snooze_title" = "後でもう一度思い出させてください…";
+"overlay.snooze_5" = "5分以内";
+"overlay.snooze_15" = "15分以内";
+"overlay.snooze_30" = "30分以内";
+"overlay.snooze_hint" = "それまで休憩は隠れます。";
+"overlay.rest_remaining" = "休憩残り";
+"overlay.snooze_break" = "スヌーズブレイク";
+"overlay.extend_break" = "休憩延長（5分）";
+"overlay.return_work" = "仕事に戻る";
+"overlay.organize_desktop" = "クリーンなデスクトップ";
+"overlay.organize_caption_on" = "オーバーレイを非表示にしています…";
+"overlay.organize_caption_off" = "オーバーレイは約 10 秒間非表示になります";
+"overlay.organize_caption2_on" = "タイマーは動作し続けます・自動的に復元します";
+"overlay.organize_caption2_off" = "ウィンドウを整列・タイマーは動き続ける";
+"overlay.organize_help" = "デスクトップを整理するために一時的に休憩 UI を非表示にします (~10 秒)。タイマーは一時停止しません。";
+"overlay.collapse_sidebar" = "サイドバーを折りたたむ";
+"overlay.collapse_cap1" = "スリムなストリップに縮小します";
+"overlay.collapse_cap2" = "オーバーレイはそのまま、デスクトップはクリック可能のまま";
+"overlay.collapse_help" = "カードのみを折りたたみます。薄暗いレイヤーは残りますが、クリックは通過します。";
+"overlay.expand" = "拡大する";
+"overlay.expand_help" = "フルブレークサイドバーを展開する";
+"overlay.stats_todos" = "統計 · Todo";
+"overlay.return_focus" = "集中力に戻る";
+"overlay.return_focus_help" = "休憩を終えて集中力に戻る";
+"overlay.passthrough_1" = "外側のオーバーレイはクリックを通過します";
+"overlay.passthrough_2" = "デスクトップは引き続き使用可能";
+
+/* Menu bar status */
+"status_menu.break.standard" = "ブレーク・標準フルスクリーン";
+"status_menu.break.disguise" = "休憩・変装サイドバー";
+"status_menu.settings" = "設定…";
+"status_menu.quit" = "フォーカス一時停止を終了する";
+
+"window.settings.title" = "フォーカス一時停止の設定";
+
+/* Catalyst */
+"catalyst.title" = "FocusPause にはネイティブ macOS が必要です";
+"catalyst.body" = "Mac Catalyst では、メニュー バー項目、全画面 NSWindow オーバーレイ、またはグローバル ショートカットを使用できません。実行先として「My Mac / macOS」を選択します。";
+
+/* Tips */
+"rest.tip.1" = "立ち上がって首を緩めます。";
+"rest.tip.2" = "水を汲んでください。";
+"rest.tip.3" = "窓の外を眺めて目を休めましょう。";
+"rest.tip.4" = "3 回深呼吸して、画面から離れてください。";
+
+/* Store messages */
+"message.break_paused_hint" = "一時停止中 — メニュー バーから再開します。";
+"message.todo_export_ok" = "%@ にエクスポートされました";
+"message.todo_export_fail" = "エクスポートに失敗しました: %@";
+"message.todo_export_empty" = "この日付範囲には Todo がありません。";
+"message.todo_export_bad_range" = "開始日は終了日以前である必要があります。";
+"message.todo_export_unsupported" = "このビルド ターゲットではエクスポートは利用できません。";
+"message.export_csv_ok" = "%@ にエクスポートされました";
+"message.export_csv_fail" = "エクスポートに失敗しました: %@";
+"message.usage_reset_ok" = "毎日の使用量のアーカイブがすべてクリアされました。";
+"message.usage_export_empty" = "この日付範囲にはエクスポートする使用状況行がありません。";
+"message.data_prune_todos_none" = "そのカットオフに一致する Todo はありませんでした。";
+"message.data_prune_todos_ok" = "古い todo は削除されました。";
+"message.data_prune_usage_none" = "このカットオフに一致する使用状況アーカイブはありませんでした。";
+"message.data_prune_usage_ok" = "%d 件の毎日の使用量アーカイブが削除されました。";
+"message.data_clear_all_ok" = "すべての ToDo と使用状況のアーカイブがクリアされました。";
+"message.dnd_outside_period" = "現在の時刻は「%@」ウィンドウの外側にあります - おやすみモードが有効になっていませんでした。";

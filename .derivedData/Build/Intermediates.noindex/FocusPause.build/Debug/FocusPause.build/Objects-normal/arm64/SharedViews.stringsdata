@@ -1,0 +1,32 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/SharedViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 327
+        }
+      },
+      {
+        "comment": "",
+        "key": "✓ %@",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 1227
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@",
+        "location": {
+          "startingColumn": 75,
+          "startingLine": 1227
+        }
+      }
+    ]
+  },
+  "version": 1
+}

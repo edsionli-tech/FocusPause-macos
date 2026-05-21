@@ -1,0 +1,292 @@
+/* Language */
+"lang.system" = "Suivre le système";
+"lang.english" = "Anglais";
+"lang.chinese_simplified" = "Chinois simplifié";
+"lang.spanish" = "Espagnol";
+"lang.english_india" = "Anglais (Inde)";
+"lang.french" = "Français";
+"lang.japanese" = "Japonais";
+"lang.russian" = "Russe";
+"lang.korean" = "Coréen";
+
+/* Settings — General */
+"settings.general.reset.confirm" = "Réinitialiser";
+
+/* Settings — Data (compact rows) */
+"settings.data.row.todos.title" = "Supprimer les tâches plus anciennes que";
+"settings.data.row.usage.title" = "Supprimer les archives d'utilisation antérieures à";
+"settings.data.row.action" = "Retirer";
+"settings.data.retention.picker.a11y" = "Heure limite";
+
+/* Settings */
+"settings.section.general" = "Général et alertes";
+"settings.section.dnd" = "Ne pas déranger";
+"settings.section.tasks" = "Tâches";
+"settings.section.data" = "Gestion des données";
+"settings.section.about" = "À propos";
+"settings.language" = "Langue";
+"settings.launch_at_login" = "Lancer à la connexion";
+"settings.show_menubar" = "Afficher l'icône de la barre de menus";
+"settings.work_duration" = "Durée de mise au point";
+"settings.break_duration" = "Durée de la pause";
+"settings.break_overlay_style" = "Style de pause plein écran";
+"settings.break_overlay_hint" = "« Déguisement » assombrit le bureau (la souris passe à travers) ; seule la carte dépolie reçoit des clics. Se replie en une fine bande.";
+"settings.reminder_sound" = "Son de rappel";
+"reminder.sound.system" = "Valeur par défaut du système";
+"reminder.sound.gentle" = "Carillon doux";
+"reminder.sound.none" = "Silencieux";
+"settings.dnd.mode" = "Mode Ne pas déranger";
+"settings.dnd.sync_focus" = "Synchroniser avec macOS Focus";
+"settings.dnd.auto_pause_meetings" = "Pause automatique des rappels pendant les réunions";
+"settings.dnd.apps" = "Déranger les applications";
+"settings.dnd.times" = "Plages de temps de perturbation";
+"settings.dnd.footer" = "Les versions futures pourront être liées au calendrier et aux applications en cours d'exécution pour ignorer les présentations et les réunions.";
+"settings.tasks.export_title" = "Exporter des tâches locales";
+"settings.tasks.export_hint" = "Choisissez une plage de dates d'échéance (jusqu'à un an avant et après aujourd'hui) et enregistrez-la au format Markdown, PDF ou CSV pour Excel. Les tâches à long terme (datées du 31/12/9999) sont toujours incluses.";
+"settings.tasks.export.start_date" = "Date de début";
+"settings.tasks.export.end_date" = "Date de fin";
+"settings.tasks.export.format" = "Format";
+"settings.tasks.export.format.markdown" = "Démarquage (.md)";
+"settings.tasks.export.format.pdf" = "PDF (.pdf)";
+"settings.tasks.export.format.csv_excel" = "Excel CSV (.csv, UTF-8)";
+"settings.tasks.export.button" = "Exporter…";
+"settings.tasks.export.panel.title" = "Exporter les tâches";
+"settings.tasks.export.panel.message" = "Choisissez où enregistrer l’exportation.";
+"settings.tasks.categories_title" = "Catégories de tâches";
+"settings.tasks.categories_hint" = "La pilule sur chaque ligne indique le type de travail (séparé de Long terme / Aujourd'hui / Demain en haut). Les valeurs par défaut incluent Travail, Vie, Études, Santé, Loisirs, Autre – renommer, recolorer, ajouter ou supprimer.";
+"settings.tasks.tab.details" = "Détails de la tâche";
+"settings.tasks.tab.categories" = "Gestion des catégories";
+"settings.tasks.tab.picker_a11y" = "Pages de gestion des tâches";
+"settings.tasks.period.week" = "Cette semaine";
+"settings.tasks.period.month" = "Ce mois-ci";
+"settings.tasks.period.custom" = "Gamme personnalisée";
+"settings.tasks.period.picker_a11y" = "Plage de dates d'échéance";
+"settings.tasks.list_title" = "Todos dans cette période";
+"settings.tasks.list_empty" = "Aucune tâche ne correspond à cette période.";
+"settings.tasks.select_all" = "Tout sélectionner";
+"settings.tasks.select_none" = "Effacer la sélection";
+"settings.tasks.export_selection_hint" = "Choisissez cette semaine, ce mois-ci ou une plage personnalisée. Ci-dessous, vous pouvez faire défiler les tâches correspondantes. Ne laissez aucun coché pour exporter tout ce qui est affiché ; vérifiez les lignes pour exporter uniquement ces éléments. Les tâches à long terme sont toujours répertoriées et incluses lors de l'exportation de la fenêtre.";
+"settings.data.local_only" = "Conserver les données d'utilisation locales uniquement";
+"settings.data.export_csv" = "Exporter l'utilisation actuelle au format CSV";
+"settings.data.clear_usage" = "Effacer les données d'utilisation";
+"settings.data.reset" = "Réinitialiser tous les paramètres";
+"settings.data.tab.usage" = "Détails d'utilisation de l'application";
+"settings.data.tab.settings" = "Paramètres de données";
+"settings.data.tab.picker_a11y" = "Pages de gestion des données";
+"settings.data.usage.title" = "Utilisation des applications";
+"settings.data.usage.hint" = "Parcourez les totaux quotidiens stockés sur ce Mac par semaine, mois ou plage personnalisée. L'exportation produit un CSV avec la date, l'application, les secondes et les minutes par ligne.";
+"settings.data.usage.period.a11y" = "Plage de dates d'utilisation archivée";
+"settings.data.usage.list_title" = "Totaux quotidiens dans cette plage";
+"settings.data.usage.empty" = "Aucun enregistrement d'utilisation pour ces jours.";
+"settings.data.usage.export" = "Exporter au format CSV…";
+"settings.data.usage.export.panel.title" = "Utilisation de l'exportation CSV";
+"settings.data.usage.export.panel.message" = "Choisissez où enregistrer le CSV.";
+"settings.data.cleanup.todos.section" = "À faire le nettoyage";
+"settings.data.cleanup.usage.section" = "Nettoyage de l'utilisation";
+"settings.data.cleanup.partial.title" = "Supprimer les anciennes données";
+"settings.data.cleanup.retention_picker" = "Plus âgé que";
+"settings.data.cleanup.retention_hint" = "Choisissez jusqu'où élaguer en arrière - les deux boutons de nettoyage ci-dessous utilisent cette coupure.";
+"settings.data.cleanup.todos.run" = "Effacer les anciennes tâches…";
+"settings.data.cleanup.usage.run" = "Effacer les anciennes archives d’utilisation…";
+"settings.data.cleanup.todos.template" = "Effacer les tâches à accomplir avant %@";
+"settings.data.cleanup.usage.template" = "Effacer l'utilisation quotidienne avant %@";
+"settings.data.age.week" = "il y a une semaine";
+"settings.data.age.month" = "il y a un mois";
+"settings.data.age.three_months" = "il y a trois mois";
+"settings.data.age.year" = "il y a un an";
+"settings.data.cleanup.all.section" = "Effacer toutes les données de tâches et d'utilisation";
+"settings.data.cleanup.all.button" = "Effacer toutes les tâches et données d'utilisation";
+"settings.data.cleanup.all.footer" = "Supprime toutes les tâches et toutes les utilisations quotidiennes archivées des applications (y compris aujourd'hui). Les préférences restent telles quelles.";
+"settings.data.danger.settings.section" = "Préférences";
+"settings.data.reset.footer" = "Restaurez les valeurs par défaut pour les durées, la langue, Ne pas déranger, les préférences des tâches, etc. Les tâches et les archives d'utilisation ne sont pas supprimées.";
+"settings.data.confirm.title" = "Confirmer";
+"settings.data.confirm.delete" = "Supprimer";
+"settings.data.confirm.todos" = "Supprimer toutes les tâches dont la date d'échéance est strictement antérieure à « %@ » ? Cela ne peut pas être annulé.";
+"settings.data.confirm.usage" = "Supprimer tous les enregistrements d'utilisation quotidienne archivés pour les jours calendaires précédant strictement « %@ » ? Cela ne peut pas être annulé.";
+"settings.data.confirm.all_data" = "Supprimer toutes les tâches et toutes les archives d'utilisation quotidienne sur ce Mac ? Cela ne peut pas être annulé.";
+"settings.data.confirm.reset_settings" = "Réinitialiser les préférences FocusPause aux valeurs par défaut ? Vos tâches et archives d'utilisation resteront.";
+"settings.about.title" = "À propos de FocusPause";
+"settings.about.body" = "FocusPause est une application macOS pour le flux et la récupération (barre de menus, pauses en plein écran, informations sur l'utilisation et tâches) qui aide les travailleurs du savoir à équilibrer intensité et repos.";
+"settings.about.version" = "Version 1.0 · SwiftUI";
+"settings.about.feedback.intro" = "Si vous rencontrez des problèmes ou avez des suggestions, contactez-nous à cet e-mail (de préférence) :";
+"settings.about.feedback.email_link" = "edsionli99@gmail.com";
+
+/* Common */
+"common.ok" = "D'ACCORD";
+"common.cancel" = "Annuler";
+"common.selected" = "Choisi";
+"common.not_selected" = "Non sélectionné";
+"format.minutes_suffix" = "%d minutes";
+"format.slider.max_minutes" = "%d minutes";
+"format.timer_rule" = "Concentration %d min · Pause %d min";
+
+/* Focus / priority / DND */
+"focus.status.idle" = "Inactif";
+"focus.status.focusing" = "Mise au point";
+"focus.status.resting" = "Repos";
+"focus.status.paused" = "En pause";
+"priority.low" = "Faible";
+"priority.normal" = "Normale";
+"priority.high" = "Haut";
+"dnd.picker.morning" = "Matin";
+"dnd.picker.afternoon" = "Après-midi";
+"dnd.picker.all_day" = "Toute la journée";
+"dnd.picker.off" = "Désactivé";
+"dnd.status.off" = "Ne pas déranger";
+"dnd.status.morning" = "Ne pas déranger · Matin";
+"dnd.status.afternoon" = "Ne pas déranger · Après-midi";
+"dnd.status.all_day" = "Ne pas déranger · Toute la journée";
+
+/* Break overlay mode */
+"break.mode.standard" = "Plein écran standard";
+"break.mode.disguise" = "Déguisement (carte latérale)";
+
+/* Usage scope */
+"usage.scope.cycle" = "Ce cycle";
+"usage.scope.today" = "Aujourd'hui";
+"usage.scope.cycle.panel" = "Utilisation · Ce cycle";
+"usage.scope.today.panel" = "Utilisation · Aujourd'hui";
+"usage.scope.cycle.desc" = "Utilisation de l'application pendant ce cycle de concentration";
+"usage.scope.today.desc" = "Utilisation de l'application aujourd'hui";
+
+/* Dates */
+"day.today" = "Aujourd'hui";
+"day.long_term" = "À long terme";
+"day.long_term.calendar_chip" = "À long terme";
+"day.yesterday" = "Hier";
+"day.tomorrow" = "Demain";
+"date.format.month_day" = "MMMd";
+"date.format.full" = "yMMM j";
+
+/* Todo categories (built-in) */
+"todo.cat.work" = "Travail";
+"todo.cat.life" = "Vie";
+"todo.cat.study" = "Étude";
+"todo.cat.health" = "Santé";
+"todo.cat.leisure" = "Loisirs";
+"todo.cat.other" = "Autre";
+
+/* Todo UI */
+"todo.list.title" = "Toutes les tâches";
+"todo.empty_day" = "Pas de choses à faire pour cette journée. Changez la date ou ajoutez-la ci-dessous.";
+"todo.placeholder" = "Faire";
+"todo.empty_hint_popover" = "Pas encore de choses à faire. Choisissez une date et ajoutez-la ci-dessous.";
+"todo.empty_hint_overlay" = "Aucune tâche pour l’instant – ajoutez-la ci-dessous.";
+"todo.add_root" = "+ Ajouter une tâche";
+"todo.add_child" = "+ Ajouter une sous-tâche (Retour ou Ajouter)";
+"todo.cancel_child" = "Annuler la sous-tâche";
+"todo.add_button" = "Ajouter";
+"todo.uncategorized" = "Non classé";
+"todo.category.help" = "Choisissez une catégorie ; utilisez la barre supérieure pour le seau dû (Long terme / Aujourd'hui / Demain ou choisissez une date).";
+"todo.menu.add_sub" = "Ajouter une sous-tâche";
+"todo.menu.priority" = "Priorité du cycle (%@)";
+"todo.menu.category" = "Catégorie";
+"todo.menu.due_date" = "Date d'échéance";
+"todo.menu.due_long_term" = "À long terme (9999-12-31)";
+"todo.menu.indent" = "Indentation de la sous-tâche";
+"todo.menu.outdent" = "Sortir à la racine";
+"todo.menu.delete" = "Supprimer";
+"todo.menu.delete_tree" = "Supprimer la tâche et les sous-tâches";
+"todo.menu.due_prev" = "Un jour plus tôt";
+"todo.menu.due_next" = "Un jour plus tard";
+"todo.cal.hint" = "Vous pouvez choisir des dates jusqu'à 15 jours à l'avance.";
+"todo.export.doc_title" = "Tâches FocusPause";
+"todo.export.header.date" = "Date";
+"todo.export.header.title" = "Faire";
+"todo.export.header.done" = "Fait";
+"todo.export.header.category" = "Catégorie";
+"todo.export.header.priority" = "Priorité";
+"todo.export.header.level" = "Niveau";
+"todo.export.done.yes" = "Oui";
+"todo.export.done.no" = "Non";
+"todo.export.level.root" = "Racine";
+"todo.export.level.subtask" = "Sous-tâche";
+"todo.cat.new" = "Nouvelle catégorie";
+"todo.cat.name_placeholder" = "Nom de la catégorie";
+"todo.cat.add" = "Ajouter une catégorie";
+"todo.cat.delete_help_single" = "Conserver au moins une catégorie";
+"todo.cat.delete_help" = "Supprimer cette catégorie";
+"todo.cat.pick_color" = "Choisissez la couleur";
+
+/* Popover */
+"popover.tagline" = "Flow & récupération, de manière réfléchie";
+"popover.break_now" = "Faites une pause";
+"popover.start_focus" = "Commencer à se concentrer";
+"popover.work_duration_menu" = "Concentration %d min";
+"popover.break_duration_menu" = "Pause %d min";
+"popover.dnd_menu" = "Ne pas déranger";
+"popover.settings" = "Paramètres";
+"popover.quit" = "Quitter";
+
+/* Break overlay */
+"overlay.break_title" = "Faites une vraie pause";
+"overlay.cmd_hint" = "Appuyez sur ⌘⌥W pour retourner au travail";
+"overlay.usage_picker" = "Portée d'utilisation";
+"overlay.usage_empty_today" = "Aucune donnée d'utilisation pour aujourd'hui";
+"overlay.usage_empty_cycle" = "Aucune donnée d'utilisation pour ce cycle";
+"overlay.confirm_return_title" = "Retourner au travail maintenant ?";
+"overlay.confirm_return_cancel" = "Annuler";
+"overlay.confirm_return_ok" = "Retour au travail";
+"overlay.confirm_return_msg" = "Cela met fin à la pause en cours. Vous pouvez toujours utiliser ⌘⌥W en cas d’urgence.";
+"overlay.snooze_title" = "Rappelez-moi encore après…";
+"overlay.snooze_5" = "Dans 5 minutes";
+"overlay.snooze_15" = "Dans 15 minutes";
+"overlay.snooze_30" = "Dans 30 minutes";
+"overlay.snooze_hint" = "La rupture se cache jusque-là.";
+"overlay.rest_remaining" = "Pause restante";
+"overlay.snooze_break" = "Pause sieste";
+"overlay.extend_break" = "Prolonger la pause (5 min)";
+"overlay.return_work" = "Retour au travail";
+"overlay.organize_desktop" = "Nettoyer le bureau";
+"overlay.organize_caption_on" = "Masquer la superposition…";
+"overlay.organize_caption_off" = "La superposition se cache pendant environ 10 secondes";
+"overlay.organize_caption2_on" = "La minuterie continue de fonctionner · Restaure automatiquement";
+"overlay.organize_caption2_off" = "Organiser les fenêtres · La minuterie continue de fonctionner";
+"overlay.organize_help" = "Masque temporairement l'interface utilisateur de pause (~ 10 s) pour ranger le bureau ; la minuterie ne s'arrête pas.";
+"overlay.collapse_sidebar" = "Réduire la barre latérale";
+"overlay.collapse_cap1" = "Se rétrécit en une fine bande";
+"overlay.collapse_cap2" = "La superposition reste · le bureau reste cliquable";
+"overlay.collapse_help" = "Réduit la carte uniquement ; la couche sombre reste mais les clics passent.";
+"overlay.expand" = "Développer";
+"overlay.expand_help" = "Développer la barre latérale des pauses complètes";
+"overlay.stats_todos" = "Statistiques · Todos";
+"overlay.return_focus" = "Retour au point";
+"overlay.return_focus_help" = "Fin de la pause et retour à la concentration";
+"overlay.passthrough_1" = "La superposition extérieure passe les clics";
+"overlay.passthrough_2" = "Le bureau reste utilisable";
+
+/* Menu bar status */
+"status_menu.break.standard" = "Pause · Plein écran standard";
+"status_menu.break.disguise" = "Pause · Barre latérale Déguisement";
+"status_menu.settings" = "Paramètres…";
+"status_menu.quit" = "Quitter FocusPause";
+
+"window.settings.title" = "Paramètres de pause de mise au point";
+
+/* Catalyst */
+"catalyst.title" = "FocusPause a besoin de macOS natif";
+"catalyst.body" = "Mac Catalyst ne peut pas utiliser l'élément de la barre de menus, la superposition NSWindow plein écran ou les raccourcis globaux. Choisissez Mon Mac / macOS comme destination d'exécution.";
+
+/* Tips */
+"rest.tip.1" = "Levez-vous et desserrez votre cou.";
+"rest.tip.2" = "Prends de l'eau.";
+"rest.tip.3" = "Regardez par la fenêtre et reposez vos yeux.";
+"rest.tip.4" = "Prenez trois respirations profondes – éloignez-vous de l’écran.";
+
+/* Store messages */
+"message.break_paused_hint" = "Pause en pause : reprise à partir de la barre de menus.";
+"message.todo_export_ok" = "Exporté vers %@";
+"message.todo_export_fail" = "Échec de l'exportation : %@";
+"message.todo_export_empty" = "Aucune tâche à accomplir dans cette plage de dates.";
+"message.todo_export_bad_range" = "La date de début doit être égale ou antérieure à la date de fin.";
+"message.todo_export_unsupported" = "L'exportation n'est pas disponible dans cette cible de build.";
+"message.export_csv_ok" = "Exporté vers %@";
+"message.export_csv_fail" = "Échec de l'exportation : %@";
+"message.usage_reset_ok" = "Toutes les archives d'utilisation quotidienne ont été effacées.";
+"message.usage_export_empty" = "Aucune ligne d'utilisation à exporter dans cette plage de dates.";
+"message.data_prune_todos_none" = "Aucune tâche ne correspondait à ce seuil.";
+"message.data_prune_todos_ok" = "Les tâches plus anciennes ont été supprimées.";
+"message.data_prune_usage_none" = "Aucune archive d'utilisation ne correspondait à ce seuil.";
+"message.data_prune_usage_ok" = "%d archive(s) d'utilisation quotidienne supprimée(s).";
+"message.data_clear_all_ok" = "Toutes les tâches et archives d'utilisation ont été effacées.";
+"message.dnd_outside_period" = "L'heure actuelle est en dehors de la fenêtre « %@ » – Ne pas déranger n'était pas activé.";

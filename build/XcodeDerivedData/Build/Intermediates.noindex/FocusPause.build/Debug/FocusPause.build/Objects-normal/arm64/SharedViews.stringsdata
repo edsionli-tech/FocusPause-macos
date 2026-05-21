@@ -1,0 +1,72 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/SharedViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "优先级：%@",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "标题",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存标题",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "修改标题",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "取消",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 118
+        }
+      },
+      {
+        "comment": "",
+        "key": "删除",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 131
+        }
+      },
+      {
+        "comment": "",
+        "key": "添加",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lldmin",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 212
+        }
+      }
+    ]
+  },
+  "version": 1
+}

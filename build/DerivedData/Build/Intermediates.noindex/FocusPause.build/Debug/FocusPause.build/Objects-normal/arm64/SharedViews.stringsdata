@@ -1,0 +1,184 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/SharedViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "可以选择至未来 15 日的日期",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 314
+        }
+      },
+      {
+        "comment": "",
+        "key": "待办清单",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 435
+        }
+      },
+      {
+        "comment": "",
+        "key": "待办事项",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 945
+        }
+      },
+      {
+        "comment": "",
+        "key": "选择事件分类；列表顶部切换「昨天 / 今天 / 明天」用于归属日期。",
+        "location": {
+          "startingColumn": 15,
+          "startingLine": 1173
+        }
+      },
+      {
+        "comment": "",
+        "key": "添加子待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1017
+        }
+      },
+      {
+        "comment": "",
+        "key": "切换优先级（%@）",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 1019
+        }
+      },
+      {
+        "comment": "",
+        "key": "事件分类",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 1020
+        }
+      },
+      {
+        "comment": "",
+        "key": "归属日期",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 1031
+        }
+      },
+      {
+        "comment": "",
+        "key": "降级为子待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1040
+        }
+      },
+      {
+        "comment": "",
+        "key": "提升为一级待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1042
+        }
+      },
+      {
+        "comment": "",
+        "key": "删除",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 1045
+        }
+      },
+      {
+        "comment": "",
+        "key": "删除本条及子待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1047
+        }
+      },
+      {
+        "comment": "",
+        "key": "未分类",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1021
+        }
+      },
+      {
+        "comment": "",
+        "key": "昨天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1032
+        }
+      },
+      {
+        "comment": "",
+        "key": "今天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1033
+        }
+      },
+      {
+        "comment": "",
+        "key": "明天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1034
+        }
+      },
+      {
+        "comment": "",
+        "key": "往前一天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1036
+        }
+      },
+      {
+        "comment": "",
+        "key": "往后一天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1037
+        }
+      },
+      {
+        "comment": "",
+        "key": "取消子项",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 1322
+        }
+      },
+      {
+        "comment": "",
+        "key": "添加",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 1329
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lldmin",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 1406
+        }
+      }
+    ]
+  },
+  "version": 1
+}

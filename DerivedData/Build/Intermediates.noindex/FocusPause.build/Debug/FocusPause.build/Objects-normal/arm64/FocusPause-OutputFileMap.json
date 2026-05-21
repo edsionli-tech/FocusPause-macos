@@ -1,0 +1,139 @@
+{
+  "" : {
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPause-primary.dia",
+    "emit-module-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPause-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPause-primary-emit-module.dia",
+    "pch" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPause-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPause-primary.swiftdeps"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/FocusPauseApp.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseApp~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/FocusPauseAppearance.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseAppearance~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/MenuBarTemplateIcon.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarTemplateIcon~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Models/FocusPauseModels.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseModels~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Models/FocusPauseStore.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/FocusPauseStore~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Services/LocalStorageService.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/LocalStorageService~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Services/OverlayWindowController.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/OverlayWindowController~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Services/SystemIntegrationServices.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SystemIntegrationServices~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/BreakOverlayView.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/BreakOverlayView~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/MenuBarPopoverView.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/MenuBarPopoverView~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/SettingsRootView.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SettingsRootView~partial.swiftmodule"
+  },
+  "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/SharedViews.swift" : {
+    "const-values" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.swiftconstvalues",
+    "dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.d",
+    "diagnostics" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.dia",
+    "index-unit-output-path" : "/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.o",
+    "llvm-bc" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.bc",
+    "object" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.o",
+    "swift-dependencies" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews.swiftdeps",
+    "swiftmodule" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/DerivedData/Build/Intermediates.noindex/FocusPause.build/Debug/FocusPause.build/Objects-normal/arm64/SharedViews~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,292 @@
+/* Language */
+"lang.system" = "Follow System";
+"lang.english" = "English";
+"lang.chinese_simplified" = "Simplified Chinese";
+"lang.spanish" = "Spanish";
+"lang.english_india" = "English (India)";
+"lang.french" = "French";
+"lang.japanese" = "Japanese";
+"lang.russian" = "Russian";
+"lang.korean" = "Korean";
+
+/* Settings — General */
+"settings.general.reset.confirm" = "Reset";
+
+/* Settings — Data (compact rows) */
+"settings.data.row.todos.title" = "Remove todos older than";
+"settings.data.row.usage.title" = "Remove usage archives older than";
+"settings.data.row.action" = "Remove";
+"settings.data.retention.picker.a11y" = "Cutoff time";
+
+/* Settings */
+"settings.section.general" = "General & Alerts";
+"settings.section.dnd" = "Do Not Disturb";
+"settings.section.tasks" = "Tasks";
+"settings.section.data" = "Data management";
+"settings.section.about" = "About";
+"settings.language" = "Language";
+"settings.launch_at_login" = "Launch at login";
+"settings.show_menubar" = "Show menu bar icon";
+"settings.work_duration" = "Focus duration";
+"settings.break_duration" = "Break duration";
+"settings.break_overlay_style" = "Full-screen break style";
+"settings.break_overlay_hint" = "“Disguise” dims the desktop (mouse passes through); only the frosted card receives clicks. Collapses to a slim strip.";
+"settings.reminder_sound" = "Reminder sound";
+"reminder.sound.system" = "System default";
+"reminder.sound.gentle" = "Gentle chime";
+"reminder.sound.none" = "Silent";
+"settings.dnd.mode" = "Do Not Disturb mode";
+"settings.dnd.sync_focus" = "Sync with macOS Focus";
+"settings.dnd.auto_pause_meetings" = "Auto-pause reminders during meetings";
+"settings.dnd.apps" = "Disturb apps";
+"settings.dnd.times" = "Disturb time ranges";
+"settings.dnd.footer" = "Future versions can tie into Calendar and running apps to skip presentations and meetings.";
+"settings.tasks.export_title" = "Export local todos";
+"settings.tasks.export_hint" = "Pick a due-date range (up to one year before and after today) and save as Markdown, PDF, or CSV for Excel. Long-term todos (dated 9999-12-31) are always included.";
+"settings.tasks.export.start_date" = "Start date";
+"settings.tasks.export.end_date" = "End date";
+"settings.tasks.export.format" = "Format";
+"settings.tasks.export.format.markdown" = "Markdown (.md)";
+"settings.tasks.export.format.pdf" = "PDF (.pdf)";
+"settings.tasks.export.format.csv_excel" = "Excel CSV (.csv, UTF-8)";
+"settings.tasks.export.button" = "Export…";
+"settings.tasks.export.panel.title" = "Export todos";
+"settings.tasks.export.panel.message" = "Choose where to save the export.";
+"settings.tasks.categories_title" = "Todo categories";
+"settings.tasks.categories_hint" = "The pill on each row tags the kind of work (separate from Long-term / Today / Tomorrow at the top). Defaults include Work, Life, Study, Health, Leisure, Other — rename, recolor, add or remove.";
+"settings.tasks.tab.details" = "Task details";
+"settings.tasks.tab.categories" = "Category management";
+"settings.tasks.tab.picker_a11y" = "Task management pages";
+"settings.tasks.period.week" = "This week";
+"settings.tasks.period.month" = "This month";
+"settings.tasks.period.custom" = "Custom range";
+"settings.tasks.period.picker_a11y" = "Due date range";
+"settings.tasks.list_title" = "Todos in this period";
+"settings.tasks.list_empty" = "No todos match this period.";
+"settings.tasks.select_all" = "Select all";
+"settings.tasks.select_none" = "Clear selection";
+"settings.tasks.export_selection_hint" = "Pick this week, this month, or a custom range. Below you can scroll through matching todos. Leave none checked to export everything shown; check rows to export only those items. Long-term todos are always listed and included when exporting the window.";
+"settings.data.local_only" = "Keep usage data local only";
+"settings.data.export_csv" = "Export today's usage CSV";
+"settings.data.clear_usage" = "Clear usage data";
+"settings.data.reset" = "Reset all settings";
+"settings.data.tab.usage" = "App usage details";
+"settings.data.tab.settings" = "Data settings";
+"settings.data.tab.picker_a11y" = "Data management pages";
+"settings.data.usage.title" = "Application usage";
+"settings.data.usage.hint" = "Browse daily totals stored on this Mac by week, month, or a custom range. Export produces one CSV with Date, App, Seconds, and Minutes per row.";
+"settings.data.usage.period.a11y" = "Archived usage date range";
+"settings.data.usage.list_title" = "Daily totals in this range";
+"settings.data.usage.empty" = "No usage records for these days.";
+"settings.data.usage.export" = "Export CSV…";
+"settings.data.usage.export.panel.title" = "Export usage CSV";
+"settings.data.usage.export.panel.message" = "Choose where to save the CSV.";
+"settings.data.cleanup.todos.section" = "Todo cleanup";
+"settings.data.cleanup.usage.section" = "Usage cleanup";
+"settings.data.cleanup.partial.title" = "Remove older data";
+"settings.data.cleanup.retention_picker" = "Older than";
+"settings.data.cleanup.retention_hint" = "Pick how far back to prune — both cleanup buttons below use this cutoff.";
+"settings.data.cleanup.todos.run" = "Clear old todos…";
+"settings.data.cleanup.usage.run" = "Clear old usage archives…";
+"settings.data.cleanup.todos.template" = "Clear todos due before %@";
+"settings.data.cleanup.usage.template" = "Clear daily usage before %@";
+"settings.data.age.week" = "one week ago";
+"settings.data.age.month" = "one month ago";
+"settings.data.age.three_months" = "three months ago";
+"settings.data.age.year" = "one year ago";
+"settings.data.cleanup.all.section" = "Clear all task & usage data";
+"settings.data.cleanup.all.button" = "Clear all todos and usage data";
+"settings.data.cleanup.all.footer" = "Removes every todo and all archived daily application usage (including today). Preferences stay as-is.";
+"settings.data.danger.settings.section" = "Preferences";
+"settings.data.reset.footer" = "Restore defaults for durations, language, Do Not Disturb, tasks preferences, etc. Todos and usage archives are not deleted.";
+"settings.data.confirm.title" = "Confirm";
+"settings.data.confirm.delete" = "Delete";
+"settings.data.confirm.todos" = "Delete all todos whose due day is strictly before “%@”? This cannot be undone.";
+"settings.data.confirm.usage" = "Delete all archived daily usage records for calendar days strictly before “%@”? This cannot be undone.";
+"settings.data.confirm.all_data" = "Delete every todo and all daily usage archives on this Mac? This cannot be undone.";
+"settings.data.confirm.reset_settings" = "Reset FocusPause preferences to defaults? Your todos and usage archives will remain.";
+"settings.about.title" = "About FocusPause";
+"settings.about.body" = "FocusPause is a macOS app for flow and recovery — menu bar, full-screen breaks, usage insights, and todos — helping knowledge workers balance intensity and rest.";
+"settings.about.version" = "Version 1.0 · SwiftUI";
+"settings.about.feedback.intro" = "If you run into issues or have suggestions, contact us at this email (preferred):";
+"settings.about.feedback.email_link" = "edsionli99@gmail.com";
+
+/* Common */
+"common.ok" = "OK";
+"common.cancel" = "Cancel";
+"common.selected" = "Selected";
+"common.not_selected" = "Not selected";
+"format.minutes_suffix" = "%d min";
+"format.slider.max_minutes" = "%d min";
+"format.timer_rule" = "Focus %d min · Break %d min";
+
+/* Focus / priority / DND */
+"focus.status.idle" = "Idle";
+"focus.status.focusing" = "Focusing";
+"focus.status.resting" = "Resting";
+"focus.status.paused" = "Paused";
+"priority.low" = "Low";
+"priority.normal" = "Normal";
+"priority.high" = "High";
+"dnd.picker.morning" = "Morning";
+"dnd.picker.afternoon" = "Afternoon";
+"dnd.picker.all_day" = "All day";
+"dnd.picker.off" = "Off";
+"dnd.status.off" = "Do Not Disturb off";
+"dnd.status.morning" = "Do Not Disturb · Morning";
+"dnd.status.afternoon" = "Do Not Disturb · Afternoon";
+"dnd.status.all_day" = "Do Not Disturb · All day";
+
+/* Break overlay mode */
+"break.mode.standard" = "Standard full screen";
+"break.mode.disguise" = "Disguise (sidebar card)";
+
+/* Usage scope */
+"usage.scope.cycle" = "This cycle";
+"usage.scope.today" = "Today";
+"usage.scope.cycle.panel" = "Usage · This cycle";
+"usage.scope.today.panel" = "Usage · Today";
+"usage.scope.cycle.desc" = "App usage during this focus cycle";
+"usage.scope.today.desc" = "App usage today";
+
+/* Dates */
+"day.today" = "Today";
+"day.long_term" = "Long-term";
+"day.long_term.calendar_chip" = "Long-term";
+"day.yesterday" = "Yesterday";
+"day.tomorrow" = "Tomorrow";
+"date.format.month_day" = "MMM d";
+"date.format.full" = "yMMM d";
+
+/* Todo categories (built-in) */
+"todo.cat.work" = "Work";
+"todo.cat.life" = "Life";
+"todo.cat.study" = "Study";
+"todo.cat.health" = "Health";
+"todo.cat.leisure" = "Leisure";
+"todo.cat.other" = "Other";
+
+/* Todo UI */
+"todo.list.title" = "Todos";
+"todo.empty_day" = "No todos for this day. Switch the date or add below.";
+"todo.placeholder" = "Todo";
+"todo.empty_hint_popover" = "No todos yet. Pick a date and add below.";
+"todo.empty_hint_overlay" = "No todos yet — add below.";
+"todo.add_root" = "+ Add todo";
+"todo.add_child" = "+ Add subtask (Return or Add)";
+"todo.cancel_child" = "Cancel subtask";
+"todo.add_button" = "Add";
+"todo.uncategorized" = "Uncategorized";
+"todo.category.help" = "Choose a category; use the top bar for due bucket (Long-term / Today / Tomorrow or pick a date).";
+"todo.menu.add_sub" = "Add subtask";
+"todo.menu.priority" = "Cycle priority (%@)";
+"todo.menu.category" = "Category";
+"todo.menu.due_date" = "Due date";
+"todo.menu.due_long_term" = "Long-term (9999-12-31)";
+"todo.menu.indent" = "Indent to subtask";
+"todo.menu.outdent" = "Outdent to root";
+"todo.menu.delete" = "Delete";
+"todo.menu.delete_tree" = "Delete task and subtasks";
+"todo.menu.due_prev" = "One day earlier";
+"todo.menu.due_next" = "One day later";
+"todo.cal.hint" = "You can pick dates up to 15 days ahead.";
+"todo.export.doc_title" = "FocusPause todos";
+"todo.export.header.date" = "Date";
+"todo.export.header.title" = "Todo";
+"todo.export.header.done" = "Done";
+"todo.export.header.category" = "Category";
+"todo.export.header.priority" = "Priority";
+"todo.export.header.level" = "Level";
+"todo.export.done.yes" = "Yes";
+"todo.export.done.no" = "No";
+"todo.export.level.root" = "Root";
+"todo.export.level.subtask" = "Subtask";
+"todo.cat.new" = "New category";
+"todo.cat.name_placeholder" = "Category name";
+"todo.cat.add" = "Add category";
+"todo.cat.delete_help_single" = "Keep at least one category";
+"todo.cat.delete_help" = "Delete this category";
+"todo.cat.pick_color" = "Pick color";
+
+/* Popover */
+"popover.tagline" = "Flow & recovery, thoughtfully";
+"popover.break_now" = "Take a break";
+"popover.start_focus" = "Start focus";
+"popover.work_duration_menu" = "Focus %d min";
+"popover.break_duration_menu" = "Break %d min";
+"popover.dnd_menu" = "Do Not Disturb";
+"popover.settings" = "Settings";
+"popover.quit" = "Quit";
+
+/* Break overlay */
+"overlay.break_title" = "Take a real break";
+"overlay.cmd_hint" = "Press ⌘⌥W to return to work";
+"overlay.usage_picker" = "Usage scope";
+"overlay.usage_empty_today" = "No usage data for today";
+"overlay.usage_empty_cycle" = "No usage data for this cycle";
+"overlay.confirm_return_title" = "Return to work now?";
+"overlay.confirm_return_cancel" = "Cancel";
+"overlay.confirm_return_ok" = "Return to work";
+"overlay.confirm_return_msg" = "This ends the current break. You can still use ⌘⌥W in an emergency.";
+"overlay.snooze_title" = "Remind me again after…";
+"overlay.snooze_5" = "In 5 minutes";
+"overlay.snooze_15" = "In 15 minutes";
+"overlay.snooze_30" = "In 30 minutes";
+"overlay.snooze_hint" = "The break hides until then.";
+"overlay.rest_remaining" = "Break remaining";
+"overlay.snooze_break" = "Snooze break";
+"overlay.extend_break" = "Extend break (5 min)";
+"overlay.return_work" = "Return to work";
+"overlay.organize_desktop" = "Clean desktop";
+"overlay.organize_caption_on" = "Hiding overlay…";
+"overlay.organize_caption_off" = "Overlay hides for ~10 seconds";
+"overlay.organize_caption2_on" = "Timer keeps running · Restores automatically";
+"overlay.organize_caption2_off" = "Arrange windows · Timer keeps running";
+"overlay.organize_help" = "Temporarily hides the break UI (~10 s) to tidy the desktop; the timer does not pause.";
+"overlay.collapse_sidebar" = "Collapse sidebar";
+"overlay.collapse_cap1" = "Shrinks to a slim strip";
+"overlay.collapse_cap2" = "Overlay stays · desktop stays clickable";
+"overlay.collapse_help" = "Collapses the card only; the dim layer stays but clicks pass through.";
+"overlay.expand" = "Expand";
+"overlay.expand_help" = "Expand full break sidebar";
+"overlay.stats_todos" = "Stats · Todos";
+"overlay.return_focus" = "Back to focus";
+"overlay.return_focus_help" = "End break and return to focus";
+"overlay.passthrough_1" = "Outside overlay passes clicks";
+"overlay.passthrough_2" = "Desktop stays usable";
+
+/* Menu bar status */
+"status_menu.break.standard" = "Break · Standard full screen";
+"status_menu.break.disguise" = "Break · Disguise sidebar";
+"status_menu.settings" = "Settings…";
+"status_menu.quit" = "Quit FocusPause";
+
+"window.settings.title" = "FocusPause Settings";
+
+/* Catalyst */
+"catalyst.title" = "FocusPause needs native macOS";
+"catalyst.body" = "Mac Catalyst cannot use the menu bar item, full-screen NSWindow overlay, or global shortcuts. Choose My Mac / macOS as the run destination.";
+
+/* Tips */
+"rest.tip.1" = "Stand up and loosen your neck.";
+"rest.tip.2" = "Grab some water.";
+"rest.tip.3" = "Look out the window and rest your eyes.";
+"rest.tip.4" = "Take three deep breaths — step away from the screen.";
+
+/* Store messages */
+"message.break_paused_hint" = "Break paused — resume from the menu bar.";
+"message.todo_export_ok" = "Exported to %@";
+"message.todo_export_fail" = "Export failed: %@";
+"message.todo_export_empty" = "No todos in this date range.";
+"message.todo_export_bad_range" = "Start date must be on or before end date.";
+"message.todo_export_unsupported" = "Export is not available in this build target.";
+"message.export_csv_ok" = "Exported to %@";
+"message.export_csv_fail" = "Export failed: %@";
+"message.usage_reset_ok" = "All daily usage archives were cleared.";
+"message.usage_export_empty" = "No usage rows in this date range to export.";
+"message.data_prune_todos_none" = "No todos matched that cutoff.";
+"message.data_prune_todos_ok" = "Older todos were removed.";
+"message.data_prune_usage_none" = "No usage archives matched that cutoff.";
+"message.data_prune_usage_ok" = "Removed %d daily usage archive(s).";
+"message.data_clear_all_ok" = "All todos and usage archives were cleared.";
+"message.dnd_outside_period" = "Current time is outside the “%@” window — Do Not Disturb was not enabled.";

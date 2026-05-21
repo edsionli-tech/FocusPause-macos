@@ -1,0 +1,104 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/MenuBarPopoverView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "FocusPause",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "心流与休整智能管理",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "立即休息",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "开始专注",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld 分钟",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "上午开启",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "下午开启",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "全天开启",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 192
+        }
+      },
+      {
+        "comment": "",
+        "key": "关闭勿扰",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 198
+        }
+      },
+      {
+        "comment": "",
+        "key": "勿扰模式",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 201
+        }
+      },
+      {
+        "comment": "",
+        "key": "设置",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 259
+        }
+      },
+      {
+        "comment": "",
+        "key": "退出",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 270
+        }
+      }
+    ]
+  },
+  "version": 1
+}

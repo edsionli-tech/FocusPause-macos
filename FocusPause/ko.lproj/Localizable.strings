@@ -1,0 +1,292 @@
+/* Language */
+"lang.system" = "시스템과 동일";
+"lang.english" = "영어";
+"lang.chinese_simplified" = "중국어(간체)";
+"lang.spanish" = "스페인어";
+"lang.english_india" = "영어(인도)";
+"lang.french" = "프랑스어";
+"lang.japanese" = "일본어";
+"lang.russian" = "러시아어";
+"lang.korean" = "한국어";
+
+/* Settings — General */
+"settings.general.reset.confirm" = "재설정";
+
+/* Settings — Data (compact rows) */
+"settings.data.row.todos.title" = "다음보다 오래된 할 일 삭제";
+"settings.data.row.usage.title" = "다음보다 오래된 사용 아카이브 제거";
+"settings.data.row.action" = "제거하다";
+"settings.data.retention.picker.a11y" = "마감 시간";
+
+/* Settings */
+"settings.section.general" = "일반 및 경고";
+"settings.section.dnd" = "방해하지 마세요";
+"settings.section.tasks" = "작업";
+"settings.section.data" = "데이터 관리";
+"settings.section.about" = "에 대한";
+"settings.language" = "언어";
+"settings.launch_at_login" = "로그인 시 실행";
+"settings.show_menubar" = "메뉴 표시줄 아이콘 표시";
+"settings.work_duration" = "초점 지속 시간";
+"settings.break_duration" = "휴식 시간";
+"settings.break_overlay_style" = "전체 화면 중단 스타일";
+"settings.break_overlay_hint" = "\"변장\"은 데스크탑을 어둡게 합니다(마우스가 통과함). 반투명 카드만 클릭을 받습니다. 슬림한 스트립으로 접힙니다.";
+"settings.reminder_sound" = "알림 소리";
+"reminder.sound.system" = "시스템 기본값";
+"reminder.sound.gentle" = "부드러운 차임벨";
+"reminder.sound.none" = "조용한";
+"settings.dnd.mode" = "방해 금지 모드";
+"settings.dnd.sync_focus" = "macOS Focus와 동기화";
+"settings.dnd.auto_pause_meetings" = "회의 중 알림 자동 일시 중지";
+"settings.dnd.apps" = "방해 앱";
+"settings.dnd.times" = "방해 시간 범위";
+"settings.dnd.footer" = "향후 버전에서는 캘린더와 실행 중인 앱을 연결하여 프레젠테이션과 회의를 건너뛸 수 있습니다.";
+"settings.tasks.export_title" = "로컬 할 일 내보내기";
+"settings.tasks.export_hint" = "마감일 범위(오늘 전후 최대 1년)를 선택하고 Markdown, PDF 또는 Excel용 CSV로 저장하세요. 장기 할 일(9999-12-31 날짜)은 항상 포함됩니다.";
+"settings.tasks.export.start_date" = "시작일";
+"settings.tasks.export.end_date" = "종료일";
+"settings.tasks.export.format" = "체재";
+"settings.tasks.export.format.markdown" = "마크다운(.md)";
+"settings.tasks.export.format.pdf" = "PDF(.pdf)";
+"settings.tasks.export.format.csv_excel" = "Excel CSV(.csv, UTF-8)";
+"settings.tasks.export.button" = "내보내다…";
+"settings.tasks.export.panel.title" = "할 일 내보내기";
+"settings.tasks.export.panel.message" = "내보내기를 저장할 위치를 선택하세요.";
+"settings.tasks.categories_title" = "할 일 카테고리";
+"settings.tasks.categories_hint" = "각 행의 알약에는 작업 종류가 태그되어 있습니다(상단의 장기/오늘/내일과 구분됨). 기본값에는 일, 생활, 공부, 건강, 여가, 기타가 포함되며 이름 바꾸기, 색상 변경, 추가 또는 제거가 포함됩니다.";
+"settings.tasks.tab.details" = "작업 세부정보";
+"settings.tasks.tab.categories" = "카테고리 관리";
+"settings.tasks.tab.picker_a11y" = "작업 관리 페이지";
+"settings.tasks.period.week" = "이번 주";
+"settings.tasks.period.month" = "이번 달";
+"settings.tasks.period.custom" = "맞춤 범위";
+"settings.tasks.period.picker_a11y" = "마감일 범위";
+"settings.tasks.list_title" = "이 기간에 할 일";
+"settings.tasks.list_empty" = "이 기간과 일치하는 할 일이 없습니다.";
+"settings.tasks.select_all" = "모두 선택";
+"settings.tasks.select_none" = "선택 취소";
+"settings.tasks.export_selection_hint" = "이번 주, 이번 달 또는 사용자 정의 범위를 선택하세요. 아래에서 일치하는 할 일을 스크롤할 수 있습니다. 표시된 모든 항목을 내보내려면 아무것도 선택하지 마십시오. 해당 항목만 내보내려면 행을 확인하세요. 창을 내보낼 때 장기 할 일이 항상 나열되고 포함됩니다.";
+"settings.data.local_only" = "사용 데이터를 로컬에만 유지";
+"settings.data.export_csv" = "오늘의 사용량 CSV 내보내기";
+"settings.data.clear_usage" = "사용 데이터 지우기";
+"settings.data.reset" = "모든 설정 재설정";
+"settings.data.tab.usage" = "앱 사용 세부정보";
+"settings.data.tab.settings" = "데이터 설정";
+"settings.data.tab.picker_a11y" = "데이터 관리 페이지";
+"settings.data.usage.title" = "애플리케이션 사용법";
+"settings.data.usage.hint" = "이 Mac에 저장된 일일 합계를 주, 월 또는 사용자 정의 범위별로 찾아보세요. 내보내기는 행당 날짜, 앱, 초, 분이 포함된 하나의 CSV를 생성합니다.";
+"settings.data.usage.period.a11y" = "보관된 사용 날짜 범위";
+"settings.data.usage.list_title" = "이 범위의 일일 합계";
+"settings.data.usage.empty" = "요즘 사용기록이 없습니다.";
+"settings.data.usage.export" = "CSV 내보내기…";
+"settings.data.usage.export.panel.title" = "사용량 CSV 내보내기";
+"settings.data.usage.export.panel.message" = "CSV를 저장할 위치를 선택하세요.";
+"settings.data.cleanup.todos.section" = "할 일 정리";
+"settings.data.cleanup.usage.section" = "사용량 정리";
+"settings.data.cleanup.partial.title" = "오래된 데이터 제거";
+"settings.data.cleanup.retention_picker" = "다음보다 오래됨";
+"settings.data.cleanup.retention_hint" = "정리할 거리를 선택하세요. 아래의 두 정리 버튼 모두 이 컷오프를 사용합니다.";
+"settings.data.cleanup.todos.run" = "오래된 할일 지우기…";
+"settings.data.cleanup.usage.run" = "오래된 사용 아카이브 지우기…";
+"settings.data.cleanup.todos.template" = "%@ 이전에 마감된 할 일 지우기";
+"settings.data.cleanup.usage.template" = "%@ 이전 일일 사용량 지우기";
+"settings.data.age.week" = "일주일 전";
+"settings.data.age.month" = "한 달 전";
+"settings.data.age.three_months" = "3개월 전";
+"settings.data.age.year" = "1년 전";
+"settings.data.cleanup.all.section" = "모든 작업 및 사용 데이터 지우기";
+"settings.data.cleanup.all.button" = "모든 할일 및 사용 데이터 지우기";
+"settings.data.cleanup.all.footer" = "모든 할 일과 보관된 일일 애플리케이션 사용량(오늘 포함)을 모두 제거합니다. 기본 설정은 그대로 유지됩니다.";
+"settings.data.danger.settings.section" = "환경설정";
+"settings.data.reset.footer" = "기간, 언어, 방해 금지, 작업 기본 설정 등에 대한 기본값을 복원합니다. 할 일 및 사용 기록은 삭제되지 않습니다.";
+"settings.data.confirm.title" = "확인하다";
+"settings.data.confirm.delete" = "삭제";
+"settings.data.confirm.todos" = "마감일이 \"%@\" 이전인 모든 할 일을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.";
+"settings.data.confirm.usage" = "\"%@\" 이전 날짜에 대해 보관된 일일 사용 기록을 모두 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.";
+"settings.data.confirm.all_data" = "이 Mac에서 모든 할 일과 모든 일일 사용량 아카이브를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.";
+"settings.data.confirm.reset_settings" = "FocusPause 환경설정을 기본값으로 재설정하시겠습니까? 할 일과 사용 기록은 그대로 유지됩니다.";
+"settings.about.title" = "FocusPause 소개";
+"settings.about.body" = "FocusPause는 메뉴 막대, 전체 화면 나누기, 사용법 통찰력, 할 일 등 흐름과 회복을 위한 macOS 앱으로, 지식 근로자가 강도와 휴식의 균형을 맞추는 데 도움이 됩니다.";
+"settings.about.version" = "버전 1.0 · SwiftUI";
+"settings.about.feedback.intro" = "문제가 발생하거나 제안 사항이 있는 경우 다음 이메일로 문의해 주세요(선호).";
+"settings.about.feedback.email_link" = "edsionli99@gmail.com";
+
+/* Common */
+"common.ok" = "좋아요";
+"common.cancel" = "취소";
+"common.selected" = "선택된";
+"common.not_selected" = "선택되지 않음";
+"format.minutes_suffix" = "%d분";
+"format.slider.max_minutes" = "%d분";
+"format.timer_rule" = "집중 %d분 · 휴식 %d분";
+
+/* Focus / priority / DND */
+"focus.status.idle" = "게으른";
+"focus.status.focusing" = "집중";
+"focus.status.resting" = "휴식";
+"focus.status.paused" = "일시중지됨";
+"priority.low" = "낮은";
+"priority.normal" = "정상";
+"priority.high" = "높은";
+"dnd.picker.morning" = "아침";
+"dnd.picker.afternoon" = "오후";
+"dnd.picker.all_day" = "하루 종일";
+"dnd.picker.off" = "끄다";
+"dnd.status.off" = "방해 금지 모드 꺼짐";
+"dnd.status.morning" = "방해 금지 · 아침";
+"dnd.status.afternoon" = "방해 금지 · 오후";
+"dnd.status.all_day" = "방해 금지 · 하루 종일";
+
+/* Break overlay mode */
+"break.mode.standard" = "표준 전체 화면";
+"break.mode.disguise" = "변장(사이드바 카드)";
+
+/* Usage scope */
+"usage.scope.cycle" = "이번 사이클";
+"usage.scope.today" = "오늘";
+"usage.scope.cycle.panel" = "사용법 · 이번주기";
+"usage.scope.today.panel" = "사용량 · 오늘";
+"usage.scope.cycle.desc" = "이 집중 주기 동안의 앱 사용량";
+"usage.scope.today.desc" = "오늘의 앱 사용량";
+
+/* Dates */
+"day.today" = "오늘";
+"day.long_term" = "장기";
+"day.long_term.calendar_chip" = "장기";
+"day.yesterday" = "어제";
+"day.tomorrow" = "내일";
+"date.format.month_day" = "MMM d";
+"date.format.full" = "yMMMd";
+
+/* Todo categories (built-in) */
+"todo.cat.work" = "일하다";
+"todo.cat.life" = "삶";
+"todo.cat.study" = "공부하다";
+"todo.cat.health" = "건강";
+"todo.cat.leisure" = "여가";
+"todo.cat.other" = "다른";
+
+/* Todo UI */
+"todo.list.title" = "할일";
+"todo.empty_day" = "오늘은 할 일이 없습니다. 날짜를 전환하거나 아래에 추가하세요.";
+"todo.placeholder" = "토도";
+"todo.empty_hint_popover" = "아직 할 일이 없습니다. 날짜를 선택하고 아래에 추가하세요.";
+"todo.empty_hint_overlay" = "아직 할 일이 없습니다. 아래에 추가하세요.";
+"todo.add_root" = "+ 할 일 추가";
+"todo.add_child" = "+ 하위 작업 추가(반환 또는 추가)";
+"todo.cancel_child" = "하위 작업 취소";
+"todo.add_button" = "추가하다";
+"todo.uncategorized" = "분류되지 않음";
+"todo.category.help" = "카테고리를 선택하세요. 기한 버킷(장기/오늘/내일 또는 날짜 선택)에 대한 상단 표시줄을 사용합니다.";
+"todo.menu.add_sub" = "하위 할 일 추가";
+"todo.menu.priority" = "순환 우선순위(%@)";
+"todo.menu.category" = "범주";
+"todo.menu.due_date" = "마감일";
+"todo.menu.due_long_term" = "장기(9999-12-31)";
+"todo.menu.indent" = "하위 작업으로 들여쓰기";
+"todo.menu.outdent" = "루트로 내어쓰기";
+"todo.menu.delete" = "삭제";
+"todo.menu.delete_tree" = "작업 및 하위 작업 삭제";
+"todo.menu.due_prev" = "하루 전";
+"todo.menu.due_next" = "하루 후";
+"todo.cal.hint" = "최대 15일 전부터 날짜를 선택할 수 있습니다.";
+"todo.export.doc_title" = "FocusPause todos";
+"todo.export.header.date" = "날짜";
+"todo.export.header.title" = "토도";
+"todo.export.header.done" = "완료";
+"todo.export.header.category" = "범주";
+"todo.export.header.priority" = "우선 사항";
+"todo.export.header.level" = "수준";
+"todo.export.done.yes" = "예";
+"todo.export.done.no" = "아니요";
+"todo.export.level.root" = "뿌리";
+"todo.export.level.subtask" = "하위 작업";
+"todo.cat.new" = "새로운 카테고리";
+"todo.cat.name_placeholder" = "카테고리 이름";
+"todo.cat.add" = "카테고리 추가";
+"todo.cat.delete_help_single" = "카테고리를 하나 이상 유지하세요.";
+"todo.cat.delete_help" = "이 카테고리 삭제";
+"todo.cat.pick_color" = "색상 선택";
+
+/* Popover */
+"popover.tagline" = "흐름과 회복, 신중하게";
+"popover.break_now" = "휴식을 취하세요";
+"popover.start_focus" = "초점 시작";
+"popover.work_duration_menu" = "집중 %d분";
+"popover.break_duration_menu" = "휴식 시간 %d분";
+"popover.dnd_menu" = "방해하지 마세요";
+"popover.settings" = "설정";
+"popover.quit" = "그만두다";
+
+/* Break overlay */
+"overlay.break_title" = "진짜 휴식을 취하세요";
+"overlay.cmd_hint" = "직장으로 돌아가려면 ⌘⌥W를 누르세요.";
+"overlay.usage_picker" = "사용범위";
+"overlay.usage_empty_today" = "오늘의 사용량 데이터가 없습니다.";
+"overlay.usage_empty_cycle" = "이 주기에 대한 사용량 데이터가 없습니다.";
+"overlay.confirm_return_title" = "지금 직장으로 복귀하시겠습니까?";
+"overlay.confirm_return_cancel" = "취소";
+"overlay.confirm_return_ok" = "직장으로 복귀";
+"overlay.confirm_return_msg" = "이것으로 현재 휴식 시간이 종료됩니다. 긴급 상황에서는 ⌘⌥W를 사용할 수 있습니다.";
+"overlay.snooze_title" = "나중에 다시 알림…";
+"overlay.snooze_5" = "5분 안에";
+"overlay.snooze_15" = "15분 후";
+"overlay.snooze_30" = "30분 후";
+"overlay.snooze_hint" = "휴식은 그때까지 숨겨져 있습니다.";
+"overlay.rest_remaining" = "남은 휴식 시간";
+"overlay.snooze_break" = "스누즈 휴식";
+"overlay.extend_break" = "휴식 시간 연장(5분)";
+"overlay.return_work" = "직장으로 복귀";
+"overlay.organize_desktop" = "데스크탑 정리";
+"overlay.organize_caption_on" = "오버레이 숨기기…";
+"overlay.organize_caption_off" = "오버레이가 ~10초 동안 숨겨집니다.";
+"overlay.organize_caption2_on" = "타이머가 계속 작동함 · 자동으로 복원됨";
+"overlay.organize_caption2_off" = "창 정렬 · 타이머가 계속 작동함";
+"overlay.organize_help" = "데스크탑을 정리하기 위해 휴식 UI를 일시적으로 숨깁니다(~10초). 타이머가 일시 중지되지 않습니다.";
+"overlay.collapse_sidebar" = "사이드바 접기";
+"overlay.collapse_cap1" = "슬림한 스트립으로 수축";
+"overlay.collapse_cap2" = "오버레이가 유지됨 · 데스크톱이 클릭 가능한 상태로 유지됨";
+"overlay.collapse_help" = "카드만 접습니다. 희미한 레이어는 유지되지만 클릭은 통과됩니다.";
+"overlay.expand" = "확장하다";
+"overlay.expand_help" = "전체 나누기 사이드바 확장";
+"overlay.stats_todos" = "통계 · 할 일";
+"overlay.return_focus" = "초점으로 돌아가기";
+"overlay.return_focus_help" = "휴식을 끝내고 다시 집중";
+"overlay.passthrough_1" = "외부 오버레이가 클릭수를 통과함";
+"overlay.passthrough_2" = "데스크탑을 계속 사용할 수 있습니다.";
+
+/* Menu bar status */
+"status_menu.break.standard" = "휴식 시간 · 표준 전체 화면";
+"status_menu.break.disguise" = "휴식 · 변장 사이드바";
+"status_menu.settings" = "설정…";
+"status_menu.quit" = "포커스 종료일시 정지";
+
+"window.settings.title" = "초점일시 정지 설정";
+
+/* Catalyst */
+"catalyst.title" = "FocusPause에는 기본 macOS가 필요합니다.";
+"catalyst.body" = "Mac Catalyst는 메뉴 표시줄 항목, 전체 화면 NSWindow 오버레이 또는 전역 바로가기를 사용할 수 없습니다. 실행 대상으로 내 Mac/macOS를 선택합니다.";
+
+/* Tips */
+"rest.tip.1" = "일어나서 목을 풀어보세요.";
+"rest.tip.2" = "물 좀 드세요.";
+"rest.tip.3" = "창밖을 바라보며 눈을 쉬어보세요.";
+"rest.tip.4" = "심호흡을 세 번 하세요. 화면에서 물러나세요.";
+
+/* Store messages */
+"message.break_paused_hint" = "휴식이 일시 중지되었습니다. 메뉴 표시줄에서 다시 시작하세요.";
+"message.todo_export_ok" = "%@로 내보냈습니다.";
+"message.todo_export_fail" = "내보내기 실패: %@";
+"message.todo_export_empty" = "이 기간에는 할 일이 없습니다.";
+"message.todo_export_bad_range" = "시작일은 종료일 또는 그 이전이어야 합니다.";
+"message.todo_export_unsupported" = "이 빌드 대상에서는 내보내기를 사용할 수 없습니다.";
+"message.export_csv_ok" = "%@로 내보냈습니다.";
+"message.export_csv_fail" = "내보내기 실패: %@";
+"message.usage_reset_ok" = "일일 사용량 기록이 모두 삭제되었습니다.";
+"message.usage_export_empty" = "이 날짜 범위에는 내보낼 사용량 행이 없습니다.";
+"message.data_prune_todos_none" = "해당 기준과 일치하는 할 일이 없습니다.";
+"message.data_prune_todos_ok" = "이전 할 일이 제거되었습니다.";
+"message.data_prune_usage_none" = "해당 기준과 일치하는 사용 아카이브가 없습니다.";
+"message.data_prune_usage_ok" = "%d개의 일일 사용량 아카이브를 제거했습니다.";
+"message.data_clear_all_ok" = "모든 할일 및 사용 기록이 삭제되었습니다.";
+"message.dnd_outside_period" = "현재 시간이 \"%@\" 창을 벗어났습니다. 방해 금지 모드가 활성화되지 않았습니다.";

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>B181C5BC-55C5-45BE-9178-8C386504E9CE</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B181C5BC-55C5-45BE-9178-8C386504E9CE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>3</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FocusPause project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FocusPause</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project FocusPause with scheme FocusPause</string>
+			<key>timeStartedRecording</key>
+			<real>800436687.78892601</real>
+			<key>timeStoppedRecording</key>
+			<real>800436698.80061698</real>
+			<key>title</key>
+			<string>Building project FocusPause with scheme FocusPause</string>
+			<key>uniqueIdentifier</key>
+			<string>B181C5BC-55C5-45BE-9178-8C386504E9CE</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>4E566D6E-C4CC-4579-B71A-2A9D8150906E</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4E566D6E-C4CC-4579-B71A-2A9D8150906E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>12</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FocusPause project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FocusPause</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project FocusPause with scheme FocusPause</string>
+			<key>timeStartedRecording</key>
+			<real>800385866.23644805</real>
+			<key>timeStoppedRecording</key>
+			<real>800385881.47444499</real>
+			<key>title</key>
+			<string>Building project FocusPause with scheme FocusPause</string>
+			<key>uniqueIdentifier</key>
+			<string>4E566D6E-C4CC-4579-B71A-2A9D8150906E</string>
+		</dict>
+		<key>72E1688C-303B-4E42-B042-F39B7ED784BB</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>72E1688C-303B-4E42-B042-F39B7ED784BB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>12</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FocusPause project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FocusPause</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project FocusPause with scheme FocusPause</string>
+			<key>timeStartedRecording</key>
+			<real>800431314.40255201</real>
+			<key>timeStoppedRecording</key>
+			<real>800431320.26564801</real>
+			<key>title</key>
+			<string>Building project FocusPause with scheme FocusPause</string>
+			<key>uniqueIdentifier</key>
+			<string>72E1688C-303B-4E42-B042-F39B7ED784BB</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

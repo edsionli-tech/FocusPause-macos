@@ -1,0 +1,168 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/SharedViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "待办事项",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "日历支持选择昨天至未来 15 天内的日期",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 210
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "待办事项",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 587
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 587
+        }
+      },
+      {
+        "comment": "",
+        "key": "添加子待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 629
+        }
+      },
+      {
+        "comment": "",
+        "key": "切换优先级（%@）",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 631
+        }
+      },
+      {
+        "comment": "",
+        "key": "归属日期",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 632
+        }
+      },
+      {
+        "comment": "",
+        "key": "降级为子待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 641
+        }
+      },
+      {
+        "comment": "",
+        "key": "提升为一级待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 643
+        }
+      },
+      {
+        "comment": "",
+        "key": "删除",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 646
+        }
+      },
+      {
+        "comment": "",
+        "key": "删除本条及子待办",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 648
+        }
+      },
+      {
+        "comment": "",
+        "key": "昨天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 633
+        }
+      },
+      {
+        "comment": "",
+        "key": "今天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 634
+        }
+      },
+      {
+        "comment": "",
+        "key": "明天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 635
+        }
+      },
+      {
+        "comment": "",
+        "key": "往前一天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 637
+        }
+      },
+      {
+        "comment": "",
+        "key": "往后一天",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 638
+        }
+      },
+      {
+        "comment": "",
+        "key": "取消子项",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 774
+        }
+      },
+      {
+        "comment": "",
+        "key": "添加",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 781
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lldmin",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 854
+        }
+      }
+    ]
+  },
+  "version": 1
+}

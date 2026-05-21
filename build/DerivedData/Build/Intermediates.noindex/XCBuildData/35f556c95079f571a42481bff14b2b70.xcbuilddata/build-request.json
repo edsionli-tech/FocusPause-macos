@@ -1,0 +1,64 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "8d618545c3bea5bf9392c73dd59545be53a9c49d5afca95765aa15f511106578"
+    }
+  ],
+  "containerPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "hostTargetedPlatform" : null,
+      "platform" : "macosx",
+      "sdk" : "macosx26.4",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/build/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/build/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/build/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/build/DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/build/DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/build/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

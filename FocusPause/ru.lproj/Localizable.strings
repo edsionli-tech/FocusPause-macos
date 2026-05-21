@@ -1,0 +1,292 @@
+/* Language */
+"lang.system" = "Системный язык";
+"lang.english" = "Английский";
+"lang.chinese_simplified" = "Упрощённый китайский";
+"lang.spanish" = "Испанский";
+"lang.english_india" = "Английский (Индия)";
+"lang.french" = "Французский";
+"lang.japanese" = "Японский";
+"lang.russian" = "Русский";
+"lang.korean" = "Корейский";
+
+/* Settings — General */
+"settings.general.reset.confirm" = "Сбросить";
+
+/* Settings — Data (compact rows) */
+"settings.data.row.todos.title" = "Удалить задачи старше";
+"settings.data.row.usage.title" = "Удалить архивы использования старше";
+"settings.data.row.action" = "Удалять";
+"settings.data.retention.picker.a11y" = "Время окончания";
+
+/* Settings */
+"settings.section.general" = "Общие и оповещения";
+"settings.section.dnd" = "Просьба не беспокоить";
+"settings.section.tasks" = "Задачи";
+"settings.section.data" = "Управление данными";
+"settings.section.about" = "О";
+"settings.language" = "Язык";
+"settings.launch_at_login" = "Запуск при входе в систему";
+"settings.show_menubar" = "Показать значок строки меню";
+"settings.work_duration" = "Продолжительность фокуса";
+"settings.break_duration" = "Продолжительность перерыва";
+"settings.break_overlay_style" = "Полноэкранный стиль разрыва";
+"settings.break_overlay_hint" = "«Маскировка» затемняет рабочий стол (проходит мышь); только матовая карта получает клики. Сворачивается в тонкую полоску.";
+"settings.reminder_sound" = "Звук напоминания";
+"reminder.sound.system" = "Система по умолчанию";
+"reminder.sound.gentle" = "Нежный перезвон";
+"reminder.sound.none" = "Тихий";
+"settings.dnd.mode" = "Режим «Не беспокоить»";
+"settings.dnd.sync_focus" = "Синхронизация с macOS Фокус";
+"settings.dnd.auto_pause_meetings" = "Напоминания об автоматической паузе во время встреч";
+"settings.dnd.apps" = "Беспокоить приложения";
+"settings.dnd.times" = "Диапазоны времени беспокойства";
+"settings.dnd.footer" = "Будущие версии смогут подключаться к Календарю и запущенным приложениям, чтобы пропускать презентации и встречи.";
+"settings.tasks.export_title" = "Экспортировать локальные задачи";
+"settings.tasks.export_hint" = "Выберите диапазон сроков сдачи (до одного года до и после сегодняшнего дня) и сохраните его в формате Markdown, PDF или CSV для Excel. Долгосрочные задачи (от 31 декабря 9999) всегда включены.";
+"settings.tasks.export.start_date" = "Дата начала";
+"settings.tasks.export.end_date" = "Дата окончания";
+"settings.tasks.export.format" = "Формат";
+"settings.tasks.export.format.markdown" = "Уценка (.md)";
+"settings.tasks.export.format.pdf" = "PDF (.pdf)";
+"settings.tasks.export.format.csv_excel" = "Excel CSV (.csv, UTF-8)";
+"settings.tasks.export.button" = "Экспортировать…";
+"settings.tasks.export.panel.title" = "Экспортировать задачи";
+"settings.tasks.export.panel.message" = "Выберите, где сохранить экспорт.";
+"settings.tasks.categories_title" = "Категории дел";
+"settings.tasks.categories_hint" = "Таблетка в каждой строке помечает вид работы (отдельно от «Долгосрочная», «Сегодня» или «Завтра» вверху). По умолчанию включены «Работа», «Жизнь», «Учёба», «Здоровье», «Досуг», «Другое» — переименовать, перекрасить, добавить или удалить.";
+"settings.tasks.tab.details" = "Подробности задачи";
+"settings.tasks.tab.categories" = "Категорийный менеджмент";
+"settings.tasks.tab.picker_a11y" = "Страницы управления задачами";
+"settings.tasks.period.week" = "На этой неделе";
+"settings.tasks.period.month" = "В этом месяце";
+"settings.tasks.period.custom" = "Пользовательский диапазон";
+"settings.tasks.period.picker_a11y" = "Диапазон сроков сдачи";
+"settings.tasks.list_title" = "Тодос за этот период";
+"settings.tasks.list_empty" = "Нет задач, соответствующих этому периоду.";
+"settings.tasks.select_all" = "Выбрать все";
+"settings.tasks.select_none" = "Очистить выбор";
+"settings.tasks.export_selection_hint" = "Выберите эту неделю, этот месяц или собственный диапазон. Ниже вы можете просмотреть соответствующие задачи. Оставьте флажок «Нет», чтобы экспортировать все отображаемое; отметьте строки, чтобы экспортировать только эти элементы. Долгосрочные задачи всегда отображаются и включаются при экспорте окна.";
+"settings.data.local_only" = "Храните данные об использовании только локально";
+"settings.data.export_csv" = "Экспортировать данные об использовании в формате CSV за сегодня";
+"settings.data.clear_usage" = "Очистить данные об использовании";
+"settings.data.reset" = "Сбросить все настройки";
+"settings.data.tab.usage" = "Подробности использования приложения";
+"settings.data.tab.settings" = "Настройки данных";
+"settings.data.tab.picker_a11y" = "Страницы управления данными";
+"settings.data.usage.title" = "Использование приложения";
+"settings.data.usage.hint" = "Просмотрите ежедневные итоги, хранящиеся на этом Mac, по неделям, месяцам или произвольному диапазону. Экспорт создает один CSV-файл с датой, приложением, секундами и минутами в каждой строке.";
+"settings.data.usage.period.a11y" = "Диапазон дат использования в архиве";
+"settings.data.usage.list_title" = "Итоговые суммы за день в этом диапазоне";
+"settings.data.usage.empty" = "Записей об использовании за эти дни нет.";
+"settings.data.usage.export" = "Экспортировать CSV…";
+"settings.data.usage.export.panel.title" = "Экспортировать использование CSV";
+"settings.data.usage.export.panel.message" = "Выберите, где сохранить CSV.";
+"settings.data.cleanup.todos.section" = "Очистка задач";
+"settings.data.cleanup.usage.section" = "Очистка использования";
+"settings.data.cleanup.partial.title" = "Удалить старые данные";
+"settings.data.cleanup.retention_picker" = "Старше чем";
+"settings.data.cleanup.retention_hint" = "Выберите, насколько далеко нужно отрезать — обе кнопки очистки ниже используют это отсечение.";
+"settings.data.cleanup.todos.run" = "Очистить старые задачи…";
+"settings.data.cleanup.usage.run" = "Очистить старые архивы использования…";
+"settings.data.cleanup.todos.template" = "Очистить задачи, подлежащие выполнению до %@";
+"settings.data.cleanup.usage.template" = "Очистить ежедневное использование до %@";
+"settings.data.age.week" = "неделю назад";
+"settings.data.age.month" = "месяц назад";
+"settings.data.age.three_months" = "три месяца назад";
+"settings.data.age.year" = "год назад";
+"settings.data.cleanup.all.section" = "Очистить все данные о задачах и использовании";
+"settings.data.cleanup.all.button" = "Очистить все задачи и данные об использовании";
+"settings.data.cleanup.all.footer" = "Удаляет все задачи и все заархивированные данные об использовании ежедневных приложений (включая сегодняшнее). Настройки остаются как есть.";
+"settings.data.danger.settings.section" = "Предпочтения";
+"settings.data.reset.footer" = "Восстановите значения по умолчанию для продолжительности, языка, режима «Не беспокоить», предпочтений задач и т. д. Задачи и архивы использования не удаляются.";
+"settings.data.confirm.title" = "Подтверждать";
+"settings.data.confirm.delete" = "Удалить";
+"settings.data.confirm.todos" = "Удалить все задачи, срок выполнения которых наступает строго до «%@»? Это невозможно отменить.";
+"settings.data.confirm.usage" = "Удалить все заархивированные записи ежедневного использования за календарные дни строго до «%@»? Это невозможно отменить.";
+"settings.data.confirm.all_data" = "Удалить все задачи и все архивы ежедневного использования на этом Mac? Это невозможно отменить.";
+"settings.data.confirm.reset_settings" = "Сбросить настройки FocusPause к значениям по умолчанию? Ваши задачи и архивы использования останутся.";
+"settings.about.title" = "О ФокусПауза";
+"settings.about.body" = "FocusPause — это приложение для macOS, которое помогает работать и восстанавливаться — строка меню, полноэкранные перерывы, статистика использования и задачи — помогает работникам умственного труда сбалансировать интенсивность и отдых.";
+"settings.about.version" = "Версия 1.0 · SwiftUI";
+"settings.about.feedback.intro" = "Если у вас возникли проблемы или у вас есть предложения, свяжитесь с нами по этому адресу электронной почты (предпочтительно):";
+"settings.about.feedback.email_link" = "edsionli99@gmail.com";
+
+/* Common */
+"common.ok" = "ХОРОШО";
+"common.cancel" = "Отмена";
+"common.selected" = "Выбрано";
+"common.not_selected" = "Не выбрано";
+"format.minutes_suffix" = "%d мин.";
+"format.slider.max_minutes" = "%d мин.";
+"format.timer_rule" = "Фокус %d мин · Перерыв %d мин";
+
+/* Focus / priority / DND */
+"focus.status.idle" = "Праздный";
+"focus.status.focusing" = "Фокусировка";
+"focus.status.resting" = "Отдых";
+"focus.status.paused" = "Приостановлено";
+"priority.low" = "Низкий";
+"priority.normal" = "Нормальный";
+"priority.high" = "Высокий";
+"dnd.picker.morning" = "Утро";
+"dnd.picker.afternoon" = "Полдень";
+"dnd.picker.all_day" = "Весь день";
+"dnd.picker.off" = "Выключенный";
+"dnd.status.off" = "Режим «Не беспокоить» выключен";
+"dnd.status.morning" = "Не беспокоить · Утром";
+"dnd.status.afternoon" = "Не беспокоить · После полудня";
+"dnd.status.all_day" = "Не беспокоить · Весь день";
+
+/* Break overlay mode */
+"break.mode.standard" = "Стандартный полноэкранный режим";
+"break.mode.disguise" = "Маскировка (карточка на боковой панели)";
+
+/* Usage scope */
+"usage.scope.cycle" = "Этот цикл";
+"usage.scope.today" = "Сегодня";
+"usage.scope.cycle.panel" = "Использование · Этот цикл";
+"usage.scope.today.panel" = "Использование · Сегодня";
+"usage.scope.cycle.desc" = "Использование приложения во время этого цикла фокусировки";
+"usage.scope.today.desc" = "Использование приложения сегодня";
+
+/* Dates */
+"day.today" = "Сегодня";
+"day.long_term" = "Долгосрочный";
+"day.long_term.calendar_chip" = "Долгосрочный";
+"day.yesterday" = "Вчера";
+"day.tomorrow" = "Завтра";
+"date.format.month_day" = "МММ д";
+"date.format.full" = "yМММ д";
+
+/* Todo categories (built-in) */
+"todo.cat.work" = "Работа";
+"todo.cat.life" = "Жизнь";
+"todo.cat.study" = "Изучать";
+"todo.cat.health" = "Здоровье";
+"todo.cat.leisure" = "Досуг";
+"todo.cat.other" = "Другой";
+
+/* Todo UI */
+"todo.list.title" = "Тодос";
+"todo.empty_day" = "Никаких дел на этот день. Измените дату или добавьте ниже.";
+"todo.placeholder" = "Тодо";
+"todo.empty_hint_popover" = "Задач пока нет. Выберите дату и добавьте ниже.";
+"todo.empty_hint_overlay" = "Задач пока нет — добавьте ниже.";
+"todo.add_root" = "+ Добавить задачу";
+"todo.add_child" = "+ Добавить подзадачу (Вернуть или Добавить)";
+"todo.cancel_child" = "Отменить подзадачу";
+"todo.add_button" = "Добавлять";
+"todo.uncategorized" = "Без категории";
+"todo.category.help" = "Выберите категорию; используйте верхнюю панель для периода выполнения (Долгосрочный/Сегодня/Завтра или выберите дату).";
+"todo.menu.add_sub" = "Добавить подзадачу";
+"todo.menu.priority" = "Приоритет цикла (%@)";
+"todo.menu.category" = "Категория";
+"todo.menu.due_date" = "Срок оплаты";
+"todo.menu.due_long_term" = "Долгосрочный (9999-12-31)";
+"todo.menu.indent" = "Отступ до подзадачи";
+"todo.menu.outdent" = "Отступ до корня";
+"todo.menu.delete" = "Удалить";
+"todo.menu.delete_tree" = "Удалить задачу и подзадачи";
+"todo.menu.due_prev" = "Днем раньше";
+"todo.menu.due_next" = "Через день";
+"todo.cal.hint" = "Вы можете выбрать даты на 15 дней вперед.";
+"todo.export.doc_title" = "ФокусПауза задачи";
+"todo.export.header.date" = "Дата";
+"todo.export.header.title" = "Тодо";
+"todo.export.header.done" = "Сделанный";
+"todo.export.header.category" = "Категория";
+"todo.export.header.priority" = "Приоритет";
+"todo.export.header.level" = "Уровень";
+"todo.export.done.yes" = "Да";
+"todo.export.done.no" = "Нет";
+"todo.export.level.root" = "Корень";
+"todo.export.level.subtask" = "Подзадача";
+"todo.cat.new" = "Новая категория";
+"todo.cat.name_placeholder" = "Название категории";
+"todo.cat.add" = "Добавить категорию";
+"todo.cat.delete_help_single" = "Оставьте хотя бы одну категорию";
+"todo.cat.delete_help" = "Удалить эту категорию";
+"todo.cat.pick_color" = "Выберите цвет";
+
+/* Popover */
+"popover.tagline" = "Поток и восстановление, вдумчиво";
+"popover.break_now" = "Сделайте перерыв";
+"popover.start_focus" = "Начать фокус";
+"popover.work_duration_menu" = "Фокус %d мин.";
+"popover.break_duration_menu" = "Перерыв %d мин.";
+"popover.dnd_menu" = "Просьба не беспокоить";
+"popover.settings" = "Настройки";
+"popover.quit" = "Покидать";
+
+/* Break overlay */
+"overlay.break_title" = "Сделайте настоящий перерыв";
+"overlay.cmd_hint" = "Нажмите ⌘⌥W, чтобы вернуться к работе.";
+"overlay.usage_picker" = "Область использования";
+"overlay.usage_empty_today" = "Нет данных об использовании на сегодня";
+"overlay.usage_empty_cycle" = "Нет данных об использовании для этого цикла";
+"overlay.confirm_return_title" = "Вернуться к работе сейчас?";
+"overlay.confirm_return_cancel" = "Отмена";
+"overlay.confirm_return_ok" = "Вернуться к работе";
+"overlay.confirm_return_msg" = "На этом текущий перерыв заканчивается. Вы все равно можете использовать ⌘⌥W в экстренной ситуации.";
+"overlay.snooze_title" = "Напомни мне еще раз после…";
+"overlay.snooze_5" = "Через 5 минут";
+"overlay.snooze_15" = "Через 15 минут";
+"overlay.snooze_30" = "Через 30 минут";
+"overlay.snooze_hint" = "Перерыв скрывается до тех пор.";
+"overlay.rest_remaining" = "Остался перерыв";
+"overlay.snooze_break" = "Отложить перерыв";
+"overlay.extend_break" = "Продлить перерыв (5 мин)";
+"overlay.return_work" = "Вернуться к работе";
+"overlay.organize_desktop" = "Чистый рабочий стол";
+"overlay.organize_caption_on" = "Скрытие наложения…";
+"overlay.organize_caption_off" = "Оверлей скрывается примерно на 10 секунд.";
+"overlay.organize_caption2_on" = "Таймер продолжает работать · Восстанавливается автоматически";
+"overlay.organize_caption2_off" = "Упорядочить окна · Таймер продолжает работать";
+"overlay.organize_help" = "Временно скрывает интерфейс перерыва (~10 секунд), чтобы привести в порядок рабочий стол; таймер не останавливается.";
+"overlay.collapse_sidebar" = "Свернуть боковую панель";
+"overlay.collapse_cap1" = "Сжимается в тонкую полоску";
+"overlay.collapse_cap2" = "Наложение остается · Рабочий стол остается доступным для кликов";
+"overlay.collapse_help" = "Сворачивает только карту; тусклый слой остается, но щелчки проходят.";
+"overlay.expand" = "Расширять";
+"overlay.expand_help" = "Развернуть боковую панель с полной разбивкой";
+"overlay.stats_todos" = "Статистика · Задачи";
+"overlay.return_focus" = "Вернуться к фокусу";
+"overlay.return_focus_help" = "Завершить перерыв и вернуться к концентрации";
+"overlay.passthrough_1" = "Внешнее наложение пропускает клики";
+"overlay.passthrough_2" = "Рабочий стол остается пригодным для использования";
+
+/* Menu bar status */
+"status_menu.break.standard" = "Перерыв · Стандартный полноэкранный режим";
+"status_menu.break.disguise" = "Перерыв · Замаскировать боковую панель";
+"status_menu.settings" = "Настройки…";
+"status_menu.quit" = "Выйти из фокусаПауза";
+
+"window.settings.title" = "Настройки ФокусПауза";
+
+/* Catalyst */
+"catalyst.title" = "FocusPause нужна родная macOS";
+"catalyst.body" = "Mac Catalyst не может использовать элемент строки меню, полноэкранное наложение NSWindow или глобальные ярлыки. Выберите «Мой Mac/macOS» в качестве места назначения для запуска.";
+
+/* Tips */
+"rest.tip.1" = "Встаньте и расслабьте шею.";
+"rest.tip.2" = "Возьмите немного воды.";
+"rest.tip.3" = "Посмотрите в окно и отдохните.";
+"rest.tip.4" = "Сделайте три глубоких вдоха — отойдите от экрана.";
+
+/* Store messages */
+"message.break_paused_hint" = "Break Pauseed — возобновление из строки меню.";
+"message.todo_export_ok" = "Экспортировано в %@";
+"message.todo_export_fail" = "Экспорт не удался: %@";
+"message.todo_export_empty" = "В этом диапазоне дат нет задач.";
+"message.todo_export_bad_range" = "Дата начала должна быть не позднее даты окончания.";
+"message.todo_export_unsupported" = "Экспорт недоступен в этой цели сборки.";
+"message.export_csv_ok" = "Экспортировано в %@";
+"message.export_csv_fail" = "Экспорт не удался: %@";
+"message.usage_reset_ok" = "Все архивы ежедневного использования были очищены.";
+"message.usage_export_empty" = "В этом диапазоне дат нет строк использования для экспорта.";
+"message.data_prune_todos_none" = "Ни одна задача не соответствовала этому порогу.";
+"message.data_prune_todos_ok" = "Старые задачи были удалены.";
+"message.data_prune_usage_none" = "Ни один архив использования не соответствовал этому пороговому значению.";
+"message.data_prune_usage_ok" = "Удалены %d архивов ежедневного использования.";
+"message.data_clear_all_ok" = "Все задачи и архивы использования были очищены.";
+"message.dnd_outside_period" = "Текущее время находится за пределами окна «%@» — режим «Не беспокоить» не включен.";

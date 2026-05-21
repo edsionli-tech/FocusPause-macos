@@ -1,0 +1,240 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/BreakOverlayView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "确认立即返回工作吗？",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "多久后再次提醒休息？",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "取消",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "返回工作",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "这会结束当前休息计时。紧急情况可继续使用 Cmd+Option+W。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "5 分钟后提醒",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "15 分钟后提醒",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "30 分钟后提醒",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "取消",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "当前休息会先收起，到选择的时间后重新进入休息提醒。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "休息时间，请放松",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "按 Cmd+Option+W 立即返回工作",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "应用耗时范围",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "暂无今日应用耗时数据",
+        "location": {
+          "startingColumn": 59,
+          "startingLine": 129
+        }
+      },
+      {
+        "comment": "",
+        "key": "暂无本轮专注应用耗时数据",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 129
+        }
+      },
+      {
+        "comment": "",
+        "key": "按 Cmd+Option+W 立即返回工作",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 291
+        }
+      },
+      {
+        "comment": "",
+        "key": "收起为右侧窄条：倒计时仍可看见；半透明遮盖上不拦截鼠标",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 252
+        }
+      },
+      {
+        "comment": "",
+        "key": "收起",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "收到边缘 · 桌面可点",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 238
+        }
+      },
+      {
+        "comment": "",
+        "key": "休息剩余",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 257
+        }
+      },
+      {
+        "comment": "",
+        "key": "展开完整休息侧边栏",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 331
+        }
+      },
+      {
+        "comment": "",
+        "key": "展开面板",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 318
+        }
+      },
+      {
+        "comment": "",
+        "key": "查看统计与待办",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 321
+        }
+      },
+      {
+        "comment": "",
+        "key": "本次休息剩余",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 338
+        }
+      },
+      {
+        "comment": "",
+        "key": "遮盖层可穿透点击桌面",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 371
+        }
+      },
+      {
+        "comment": "",
+        "key": "返回专注",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 362
+        }
+      },
+      {
+        "comment": "",
+        "key": "暂无今日应用耗时数据",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 405
+        }
+      },
+      {
+        "comment": "",
+        "key": "暂无本轮专注应用耗时数据",
+        "location": {
+          "startingColumn": 86,
+          "startingLine": 405
+        }
+      },
+      {
+        "comment": "",
+        "key": "应用耗时范围",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 389
+        }
+      }
+    ]
+  },
+  "version": 1
+}

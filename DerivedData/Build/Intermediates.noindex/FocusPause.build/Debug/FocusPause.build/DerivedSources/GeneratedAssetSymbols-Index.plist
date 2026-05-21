@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACColorNameAccentColor</string>
+			<key>relativePath</key>
+			<string>./AccentColor.colorset</string>
+			<key>swiftSymbol</key>
+			<string>accent</string>
+		</dict>
+	</array>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameMenuBarIcon</string>
+			<key>relativePath</key>
+			<string>./MenuBarIcon.imageset</string>
+			<key>swiftSymbol</key>
+			<string>menuBarIcon</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameMenuBarStatusTemplate</string>
+			<key>relativePath</key>
+			<string>./MenuBarStatusTemplate.imageset</string>
+			<key>swiftSymbol</key>
+			<string>menuBarStatusTemplate</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>

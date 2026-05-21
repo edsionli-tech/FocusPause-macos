@@ -1,0 +1,16 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/FocusPauseAppearance.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "FocusPause",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 17
+        }
+      }
+    ]
+  },
+  "version": 1
+}

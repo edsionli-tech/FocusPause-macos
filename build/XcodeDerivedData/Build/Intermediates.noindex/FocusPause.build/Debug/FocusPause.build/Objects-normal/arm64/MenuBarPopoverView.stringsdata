@@ -1,0 +1,128 @@
+{
+  "source": "/Users/lizhirui/Documents/ideaProject/AI_test_project/FocusPause/FocusPause/Views/MenuBarPopoverView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "FocusPause",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "心流与休整智能管理",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "立即休息",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "开始专注",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 103
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld 分钟",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 157
+        }
+      },
+      {
+        "comment": "",
+        "key": "上午开启",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "下午开启",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 183
+        }
+      },
+      {
+        "comment": "",
+        "key": "全天开启",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 188
+        }
+      },
+      {
+        "comment": "",
+        "key": "关闭勿扰",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "勿扰模式",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日待办",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 216
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 219
+        }
+      },
+      {
+        "comment": "",
+        "key": "暂无待办，添加一个今天要完成的小任务。",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 226
+        }
+      },
+      {
+        "comment": "",
+        "key": "设置",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 263
+        }
+      },
+      {
+        "comment": "",
+        "key": "退出",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 274
+        }
+      }
+    ]
+  },
+  "version": 1
+}
