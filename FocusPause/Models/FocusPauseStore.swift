@@ -5,6 +5,10 @@ import AppKit
 import UniformTypeIdentifiers
 #endif
 
+extension Notification.Name {
+    static let focusPauseForceCloseBreakOverlay = Notification.Name("FocusPauseForceCloseBreakOverlay")
+}
+
 @MainActor
 final class FocusPauseStore: ObservableObject {
     @Published var status: FocusStatus = .focusing
@@ -401,6 +405,7 @@ final class FocusPauseStore: ObservableObject {
         focusSecondsRemaining = max(minutes, 1) * 60
         breakSecondsRemaining = settings.breakMinutes * 60
         cancelBreakDesktopRevealScheduling()
+        requestBreakOverlayClose()
     }
 
     func extendBreak() {
@@ -421,6 +426,7 @@ final class FocusPauseStore: ObservableObject {
         status = .paused
         panicMessage = Localized.string("message.break_paused_hint", locale: settings.resolvedLocale)
         cancelBreakDesktopRevealScheduling()
+        requestBreakOverlayClose()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) { [weak self] in
             self?.panicMessage = nil
         }
@@ -1199,6 +1205,13 @@ final class FocusPauseStore: ObservableObject {
         breakSecondsRemaining = settings.breakMinutes * 60
         refreshUsageAudit(force: true)
         cancelBreakDesktopRevealScheduling()
+        requestBreakOverlayClose()
+    }
+
+    private func requestBreakOverlayClose() {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .focusPauseForceCloseBreakOverlay, object: nil)
+        }
     }
 
     /// - Parameter force: 为 true 时立即刷新（切换统计口径、设置变更等）；休息时默认同 tick 节流，避免侧边栏 ScrollView 每秒随用量条重建而跳回顶部。

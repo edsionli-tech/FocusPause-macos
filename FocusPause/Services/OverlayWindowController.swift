@@ -5,7 +5,10 @@ import SwiftUI
 
 @MainActor
 final class OverlayWindowController {
+    private static let overlayWindowIdentifier = NSUserInterfaceItemIdentifier("FocusPauseOverlayWindow")
+
     private var windowsByScreenID: [String: NSWindow] = [:]
+    private var windowsPendingClose: [NSWindow] = []
     private weak var activeStore: FocusPauseStore?
     private var screenObserver: NSObjectProtocol?
 
@@ -16,18 +19,27 @@ final class OverlayWindowController {
             queue: .main
         ) { [weak self] _ in
             Task { @MainActor in
-                guard let self, let activeStore = self.activeStore else { return }
+                guard let self, let activeStore = self.activeStore, activeStore.status == .resting else {
+                    self?.close()
+                    return
+                }
                 self.show(store: activeStore)
             }
         }
     }
 
     func show(store: FocusPauseStore) {
+        guard store.status == .resting else {
+            close()
+            return
+        }
+
         activeStore = store
+        closeUntrackedOverlayWindows()
 
         let currentScreenIDs = Set(NSScreen.screens.map(screenID))
-        for staleID in windowsByScreenID.keys where !currentScreenIDs.contains(staleID) {
-            windowsByScreenID.removeValue(forKey: staleID)?.close()
+        for staleID in Array(windowsByScreenID.keys) where !currentScreenIDs.contains(staleID) {
+            closeOverlayWindow(windowsByScreenID.removeValue(forKey: staleID))
         }
 
         let mode = store.settings.resolvedBreakOverlayMode
@@ -45,23 +57,27 @@ final class OverlayWindowController {
         NSApp.activate(ignoringOtherApps: true)
     }
 
-    /// 同步关闭所有遮罩窗口；避免异步 `close` 与随后的 `show` 交错导致 `removeAll` 误删新窗口。
+    /// 同步关闭所有遮罩窗口；同时销毁未被字典记录的孤儿窗口，避免 `.screenSaver` 层级窗口残留。
     func close() {
-        let windows = Array(windowsByScreenID.values)
+        let windows = trackedAndOrphanOverlayWindows()
         windowsByScreenID.removeAll()
         activeStore = nil
         for window in windows {
-            window.orderOut(nil)
+            closeOverlayWindow(window)
         }
     }
 
     func refresh(store: FocusPauseStore) {
-        guard activeStore != nil else { return }
+        guard activeStore != nil, store.status == .resting else {
+            close()
+            return
+        }
         activeStore = store
+        closeUntrackedOverlayWindows()
         let mode = store.settings.resolvedBreakOverlayMode
         let currentIDs = Set(NSScreen.screens.map(screenID))
-        for staleID in windowsByScreenID.keys where !currentIDs.contains(staleID) {
-            windowsByScreenID.removeValue(forKey: staleID)?.close()
+        for staleID in Array(windowsByScreenID.keys) where !currentIDs.contains(staleID) {
+            closeOverlayWindow(windowsByScreenID.removeValue(forKey: staleID))
         }
         for screen in NSScreen.screens {
             let id = screenID(screen)
@@ -75,7 +91,10 @@ final class OverlayWindowController {
 
     /// 收起/展开时更新侧边栏所在区域（全屏窗口不变）。
     func relayoutDisguiseCompositeIfNeeded(store: FocusPauseStore) {
-        guard activeStore != nil else { return }
+        guard activeStore != nil, store.status == .resting else {
+            close()
+            return
+        }
         guard store.settings.resolvedBreakOverlayMode == .disguise else { return }
         activeStore = store
         for window in windowsByScreenID.values {
@@ -87,6 +106,11 @@ final class OverlayWindowController {
 
     /// 暂时隐藏遮罩窗口（仍保留 `activeStore` 与视图层级），用于「整理桌面」短时放行桌面操作。
     func setTemporaryHidden(_ hidden: Bool) {
+        guard activeStore?.status == .resting else {
+            close()
+            return
+        }
+
         for window in windowsByScreenID.values {
             if hidden {
                 window.orderOut(nil)
@@ -125,6 +149,8 @@ final class OverlayWindowController {
             defer: false,
             screen: screen
         )
+        window.identifier = Self.overlayWindowIdentifier
+        window.isReleasedWhenClosed = false
         window.level = .screenSaver
         configureOverlayWindow(window, screen: screen, mode: mode)
         window.displaysWhenScreenProfileChanges = true
@@ -147,6 +173,50 @@ final class OverlayWindowController {
             window.isOpaque = false
             window.hasShadow = false
         }
+    }
+
+    private func trackedAndOrphanOverlayWindows() -> [NSWindow] {
+        var result = Array(windowsByScreenID.values)
+        for window in NSApp.windows where isOverlayWindow(window) && !result.contains(where: { $0 === window }) {
+            result.append(window)
+        }
+        return result
+    }
+
+    private func closeUntrackedOverlayWindows() {
+        let tracked = Array(windowsByScreenID.values)
+        for window in NSApp.windows where isOverlayWindow(window) && !tracked.contains(where: { $0 === window }) {
+            closeOverlayWindow(window)
+        }
+    }
+
+    private func closeOverlayWindow(_ window: NSWindow?) {
+        guard let window else { return }
+
+        if let sheet = window.attachedSheet {
+            window.endSheet(sheet)
+        }
+
+        // Make the overlay harmless immediately, then let AppKit finish any sheet/action callback
+        // before actually closing the parent window.
+        window.level = .normal
+        window.ignoresMouseEvents = true
+        window.contentView = nil
+        window.orderOut(nil)
+
+        guard !windowsPendingClose.contains(where: { $0 === window }) else { return }
+        windowsPendingClose.append(window)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { [weak self, weak window] in
+            guard let self, let window else { return }
+            window.close()
+            self.windowsPendingClose.removeAll { $0 === window }
+        }
+    }
+
+    private func isOverlayWindow(_ window: NSWindow) -> Bool {
+        if window.identifier == Self.overlayWindowIdentifier { return true }
+        if window is FocusPauseOverlayWindow { return true }
+        return false
     }
 
     private func screenID(_ screen: NSScreen) -> String {

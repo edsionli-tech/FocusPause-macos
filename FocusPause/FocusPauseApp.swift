@@ -59,6 +59,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
     private var overlayCollapseRefreshCancellable: AnyCancellable?
     private var breakOverlayStatusCancellable: AnyCancellable?
     private var breakDesktopRevealCancellable: AnyCancellable?
+    private var forceCloseBreakOverlayCancellable: AnyCancellable?
     private var statusItemContextMenu: NSMenu?
     private var selfRetainer: AppDelegate?
 
@@ -79,6 +80,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
         observeBreakDesktopReveal()
         observeOverlayLayoutRefresh()
         observeBreakOverlaySidebarCollapse()
+        observeForceCloseBreakOverlay()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -92,6 +94,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
         overlayCollapseRefreshCancellable = nil
         breakOverlayStatusCancellable = nil
         breakDesktopRevealCancellable = nil
+        forceCloseBreakOverlayCancellable = nil
         popover?.performClose(nil)
         overlayController.close()
         selfRetainer = nil
@@ -274,6 +277,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
     private func setupHotkey() {
         hotkeyController = GlobalHotkeyController { [weak self] in
             guard let self else { return }
+            overlayController.close()
             guard store.status == .resting else { return }
             store.returnToFocusFromOverlay()
             overlayController.close()
@@ -311,6 +315,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
                         overlayController.relayoutDisguiseCompositeIfNeeded(store: store)
                     }
                 }
+            }
+    }
+
+    private func observeForceCloseBreakOverlay() {
+        forceCloseBreakOverlayCancellable = NotificationCenter.default.publisher(for: .focusPauseForceCloseBreakOverlay)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.overlayController.close()
             }
     }
 
