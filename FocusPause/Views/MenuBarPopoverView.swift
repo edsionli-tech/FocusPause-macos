@@ -226,13 +226,12 @@ struct MenuBarPopoverView: View {
             .padding(.horizontal, 8)
 
             ScrollView {
-                NotesChecklistTodoPanel(
+                TodoChecklistEditorView(
                     store: store,
                     pendingParentId: $pendingTodoParentId,
                     prefersLightContent: false,
                     emptyStateHint: Localized.string("todo.empty_hint_popover", locale: locale),
-                    panelChrome: .popoverCard,
-                    hideDayHeader: true
+                    panelChrome: .popoverCard
                 )
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

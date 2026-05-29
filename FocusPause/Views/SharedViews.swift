@@ -471,7 +471,7 @@ struct TodoListDayHeader: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-        HStack(alignment: .firstTextBaseline, spacing: 10) {
+            HStack(alignment: .center, spacing: 10) {
                 Text(Localized.string("todo.list.title", locale: locale))
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(titleColor)
@@ -481,6 +481,7 @@ struct TodoListDayHeader: View {
                     .monospacedDigit()
                     .foregroundStyle(progressColor)
             }
+            .frame(height: 22)
 
             HStack(spacing: 0) {
                 segmentButton(title: Localized.string("day.long_term", locale: locale), day: longTermStart)
@@ -492,12 +493,14 @@ struct TodoListDayHeader: View {
                 specificDateSegmentButton
             }
             .padding(3)
+            .frame(height: 44)
             .background(barBackground, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .strokeBorder(barStroke, lineWidth: 1)
             }
         }
+        .frame(height: 74, alignment: .top)
         .onAppear {
             syncCalendarChipFromListSelectionIfNotLongTerm()
         }
@@ -568,6 +571,8 @@ struct TodoListDayHeader: View {
             Text(title)
                 .font(.subheadline.weight(.medium))
                 .foregroundStyle(on ? Color.white : mutedSegmentTitle)
+                .lineLimit(1)
+                .minimumScaleFactor(0.82)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 11)
                 .padding(.horizontal, 10)
@@ -578,6 +583,46 @@ struct TodoListDayHeader: View {
                 )
                 }
                 .buttonStyle(.plain)
+    }
+}
+
+enum TodoChecklistKeyboardRouting {
+    /// Popover/settings style: let the native `NSTextView` key handling path process normal editing.
+    case native
+    /// Full-screen overlay style: route key events through the local monitor first because the overlay scroll view can intercept them.
+    case fullScreenOverlay
+}
+
+#if os(macOS) && !targetEnvironment(macCatalyst)
+extension Notification.Name {
+    static let focusPauseTodoEditorHeightChanged = Notification.Name("FocusPauseTodoEditorHeightChanged")
+}
+#endif
+
+/// Shared entry point for the Notes-style todo editor.
+///
+/// Popover, standard fullscreen, and disguise fullscreen should all enter the editor through this wrapper so
+/// return/backspace/indent/category behavior stays aligned while each surface keeps only its container styling.
+struct TodoChecklistEditorView: View {
+    @ObservedObject var store: FocusPauseStore
+    @Binding var pendingParentId: UUID?
+    var prefersLightContent: Bool
+    var emptyStateHint: String
+    var panelChrome: TodoListPanelChrome
+    var keyboardRouting: TodoChecklistKeyboardRouting = .native
+    var trailingPadding: CGFloat = 0
+
+    var body: some View {
+        NotesChecklistTodoPanel(
+            store: store,
+            pendingParentId: $pendingParentId,
+            prefersLightContent: prefersLightContent,
+            emptyStateHint: emptyStateHint,
+            panelChrome: panelChrome,
+            hideDayHeader: true,
+            useLocalKeyMonitor: keyboardRouting == .fullScreenOverlay
+        )
+        .padding(.trailing, trailingPadding)
     }
 }
 
@@ -1695,12 +1740,33 @@ struct UsageBarsView: View {
 #if os(macOS) && !targetEnvironment(macCatalyst)
 
 /// 跨 SwiftUI 更新周期定位并聚焦某一行的 AppKit 编辑器（回车新建下一行后需要）。
+/// 全屏多屏时每个屏幕各有一份待办 UI，同一 `rowId` 会对应多个 `NSTextView`，需按当前编辑窗口择优聚焦。
 fileprivate final class TodoChecklistFieldBridge {
     static let shared = TodoChecklistFieldBridge()
-    private var fields: [UUID: WeakField] = [:]
+    private var fieldsByRow: [UUID: [WeakField]] = [:]
 
     private struct WeakField {
         weak var view: TodoChecklistLayoutTextView?
+    }
+
+    /// 弹 sheet / 失焦前优先使用的全屏遮盖窗口（多屏时取用户最近编辑的那块屏）。
+    var preferredOverlayWindow: NSWindow? {
+        FocusPauseOverlayEditingContext.preferredOverlayWindow
+    }
+
+    func noteEditorWindow(_ window: NSWindow?) {
+        FocusPauseOverlayEditingContext.noteOverlayWindow(window)
+    }
+
+    /// 回车新建下一行等场景：在切换 `rowId` 前记住当前正在编辑的遮盖窗口。
+    func noteEditorWindowFromCurrentFirstResponder() {
+        for list in fieldsByRow.values {
+            for field in list {
+                guard let tv = field.view, tv.window?.firstResponder === tv else { continue }
+                noteEditorWindow(tv.window)
+                return
+            }
+        }
     }
 
     /// 将 `NSTextView` 滚入外层 AppKit 滚动视图可视区（SwiftUI `ScrollView` 底层为 `NSScrollView`）。
@@ -1715,17 +1781,51 @@ fileprivate final class TodoChecklistFieldBridge {
     }
 
     func register(rowId: UUID, view: TodoChecklistLayoutTextView) {
-        fields[rowId] = WeakField(view: view)
+        var list = fieldsByRow[rowId] ?? []
+        list.removeAll { $0.view == nil || $0.view === view }
+        list.append(WeakField(view: view))
+        fieldsByRow[rowId] = list
     }
 
     func unregister(rowId: UUID, view: TodoChecklistLayoutTextView) {
-        if fields[rowId]?.view === view {
-            fields.removeValue(forKey: rowId)
+        guard var list = fieldsByRow[rowId] else { return }
+        list.removeAll { $0.view == nil || $0.view === view }
+        if list.isEmpty {
+            fieldsByRow.removeValue(forKey: rowId)
+        } else {
+            fieldsByRow[rowId] = list
         }
     }
 
+    private func aliveViews(for rowId: UUID) -> [TodoChecklistLayoutTextView] {
+        guard let list = fieldsByRow[rowId] else { return [] }
+        return list.compactMap(\.view).filter { $0.window != nil }
+    }
+
+    private func resolvedView(for rowId: UUID) -> TodoChecklistLayoutTextView? {
+        let alive = aliveViews(for: rowId)
+        guard !alive.isEmpty else { return nil }
+
+        if let preferredWindow = FocusPauseOverlayEditingContext.preferredOverlayWindow,
+           let match = alive.first(where: { $0.window === preferredWindow }) {
+            return match
+        }
+
+        if let match = alive.first(where: { $0.window?.firstResponder === $0 }) {
+            return match
+        }
+
+        if let key = NSApp.keyWindow,
+           let match = alive.first(where: { $0.window === key }) {
+            return match
+        }
+
+        return alive.first
+    }
+
     func focus(rowId: UUID, placeCaretAtEnd: Bool = true, caretUTF16: Int? = nil, attempt: Int = 0) {
-        guard let tv = fields[rowId]?.view, tv.window != nil else {
+        noteEditorWindowFromCurrentFirstResponder()
+        guard let tv = resolvedView(for: rowId) else {
             // 新建行后 NSTextView 可能晚一拍才挂载；稍后重试，避免静默失败导致无法接续输入。
             guard attempt < 16 else { return }
             DispatchQueue.main.async {
@@ -1733,7 +1833,10 @@ fileprivate final class TodoChecklistFieldBridge {
             }
             return
         }
-        tv.window?.makeKeyAndOrderFront(nil)
+        if let window = tv.window {
+            noteEditorWindow(window)
+            window.makeKeyAndOrderFront(nil)
+        }
         let becameFirst = tv.window?.makeFirstResponder(tv) == true
         let len = (tv.string as NSString).length
         if let c = caretUTF16 {
@@ -1753,23 +1856,23 @@ fileprivate final class TodoChecklistFieldBridge {
             return
         }
         DispatchQueue.main.async { [weak self] in
-            guard let self, self.fields[rowId]?.view === tv else { return }
+            guard let self, self.resolvedView(for: rowId) === tv else { return }
             self.scrollFieldIntoVisibleArea(tv)
         }
     }
 
     /// 行中回车后本条在短时间内仍是第一响应者：`updateNSView` 在 editing 时不会用 Binding 覆盖 string，需手动对齐。
     func syncPlainWhileFirstResponder(rowId: UUID, plain: String) {
-        guard let tv = fields[rowId]?.view else { return }
-        guard tv.window?.firstResponder === tv else { return }
         let normalized = plain
             .replacingOccurrences(of: "\r\n", with: "\n")
             .replacingOccurrences(of: "\r", with: "\n")
-        guard tv.string != normalized else { return }
-        tv.string = normalized
-        tv.syncTypingAppearance()
-        tv.invalidateIntrinsicContentSize()
-        NotificationCenter.default.post(name: NSText.didChangeNotification, object: tv)
+        for tv in aliveViews(for: rowId) where tv.window?.firstResponder === tv {
+            guard tv.string != normalized else { continue }
+            tv.string = normalized
+            tv.syncTypingAppearance()
+            tv.invalidateIntrinsicContentSize()
+            NotificationCenter.default.post(name: NSText.didChangeNotification, object: tv)
+        }
     }
 }
 
@@ -1910,6 +2013,15 @@ private final class TodoChecklistLayoutTextView: NSTextView {
     private func notifyTextChanged() {
         invalidateIntrinsicContentSize()
         NotificationCenter.default.post(name: NSText.didChangeNotification, object: self)
+        notifyHeightMayHaveChanged()
+    }
+
+    func notifyHeightMayHaveChanged() {
+        invalidateIntrinsicContentSize()
+        superview?.invalidateIntrinsicContentSize()
+        superview?.needsLayout = true
+        enclosingScrollView?.needsLayout = true
+        NotificationCenter.default.post(name: .focusPauseTodoEditorHeightChanged, object: self)
     }
 
     override func mouseDown(with event: NSEvent) {
@@ -1921,6 +2033,7 @@ private final class TodoChecklistLayoutTextView: NSTextView {
         let ok = super.becomeFirstResponder()
         if ok {
             keyDelegate?.editorInteractionBegan()
+            TodoChecklistFieldBridge.shared.noteEditorWindow(window)
             installEditKeyMonitor()
             syncTypingAppearance()
         }
@@ -2147,6 +2260,7 @@ private struct TodoChecklistField: NSViewRepresentable {
         func textDidBeginEditing(_ notification: Notification) {
             onBeginEditing()
             onNativeFocusChanged?(true)
+            TodoChecklistFieldBridge.shared.noteEditorWindow(textView?.window)
         }
 
         func textDidEndEditing(_ notification: Notification) {
@@ -2155,12 +2269,13 @@ private struct TodoChecklistField: NSViewRepresentable {
 
         func editorInteractionBegan() {
             onBeginEditing()
+            TodoChecklistFieldBridge.shared.noteEditorWindow(textView?.window)
         }
 
         func textDidChange(_ notification: Notification) {
             guard let tv = textView else { return }
             text.wrappedValue = tv.string
-            tv.invalidateIntrinsicContentSize()
+            tv.notifyHeightMayHaveChanged()
         }
 
         func submitReturn(collapsedPlain: String, caretUTF16: Int) {

@@ -3,6 +3,30 @@ import AppKit
 import Combine
 import SwiftUI
 
+/// 全屏多屏遮盖：记录用户当前在哪块屏编辑待办，供聚焦与弹窗锚点使用。
+enum FocusPauseOverlayEditingContext {
+    private static weak var preferredWindow: NSWindow?
+
+    static var preferredOverlayWindow: NSWindow? {
+        if let preferredWindow, preferredWindow.isVisible {
+            return preferredWindow
+        }
+        if let key = NSApp.keyWindow, isOverlayWindow(key) {
+            return key
+        }
+        return NSApp.windows.first { isOverlayWindow($0) && $0.isVisible }
+    }
+
+    static func noteOverlayWindow(_ window: NSWindow?) {
+        guard let window, isOverlayWindow(window) else { return }
+        preferredWindow = window
+    }
+
+    private static func isOverlayWindow(_ window: NSWindow) -> Bool {
+        window.identifier?.rawValue == "FocusPauseOverlayWindow" || window.level == .screenSaver
+    }
+}
+
 @MainActor
 final class OverlayWindowController {
     private static let overlayWindowIdentifier = NSUserInterfaceItemIdentifier("FocusPauseOverlayWindow")
@@ -50,10 +74,10 @@ final class OverlayWindowController {
             configureOverlayWindow(window, screen: screen, mode: mode)
             applyContentView(to: window, store: store, mode: mode)
             window.orderFrontRegardless()
-            window.makeKeyAndOrderFront(nil)
             windowsByScreenID[id] = window
         }
 
+        focusPreferredOverlayWindow()
         NSApp.activate(ignoringOtherApps: true)
     }
 
@@ -87,6 +111,7 @@ final class OverlayWindowController {
             window.orderFrontRegardless()
             windowsByScreenID[id] = window
         }
+        focusPreferredOverlayWindow()
     }
 
     /// 收起/展开时更新侧边栏所在区域（全屏窗口不变）。
@@ -116,10 +141,10 @@ final class OverlayWindowController {
                 window.orderOut(nil)
             } else {
                 window.orderFrontRegardless()
-                window.makeKeyAndOrderFront(nil)
             }
         }
         if !hidden {
+            focusPreferredOverlayWindow()
             NSApp.activate(ignoringOtherApps: true)
         }
     }
@@ -133,10 +158,18 @@ final class OverlayWindowController {
     private func applyContentView(to window: NSWindow, store: FocusPauseStore, mode: BreakOverlayDisplayMode) {
         switch mode {
         case .standard:
-            window.contentView = NSHostingView(rootView: FocusPauseLocalizedRoot(store: store) {
+            let root = FocusPauseLocalizedRoot(store: store) {
                 BreakOverlayView(store: store)
-            })
+            }
+            if let hosting = window.contentView as? NSHostingView<FocusPauseLocalizedRoot<BreakOverlayView>> {
+                hosting.rootView = root
+            } else {
+                window.contentView = NSHostingView(rootView: root)
+            }
         case .disguise:
+            if window.contentView is DisguiseOverlayCompositeView {
+                return
+            }
             window.contentView = DisguiseOverlayCompositeView(store: store)
         }
     }
@@ -224,6 +257,19 @@ final class OverlayWindowController {
             return number.stringValue
         }
         return "\(screen.frame.origin.x)-\(screen.frame.origin.y)-\(screen.frame.width)-\(screen.frame.height)"
+    }
+
+    /// 多屏遮盖仅将「当前编辑/主屏」窗口设为 key，避免循环 `makeKeyAndOrderFront` 把焦点偷到另一块屏。
+    private func focusPreferredOverlayWindow() {
+        if let preferred = FocusPauseOverlayEditingContext.preferredOverlayWindow,
+           windowsByScreenID.values.contains(where: { $0 === preferred }) {
+            preferred.makeKeyAndOrderFront(nil)
+            return
+        }
+        if let main = NSScreen.main,
+           let mainWindow = windowsByScreenID[screenID(main)] {
+            mainWindow.makeKeyAndOrderFront(nil)
+        }
     }
 }
 

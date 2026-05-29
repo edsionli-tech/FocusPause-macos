@@ -1,4 +1,7 @@
 import SwiftUI
+#if canImport(Charts) && !targetEnvironment(macCatalyst)
+import Charts
+#endif
 
 enum SettingsSection: String, CaseIterable, Identifiable {
     /// 原「通用」「提醒」合并为一页。
@@ -169,11 +172,6 @@ struct SettingsRootView: View {
                     Text(Localized.string("reminder.sound.gentle", locale: locale)).tag("gentle")
                     Text(Localized.string("reminder.sound.none", locale: locale)).tag("none")
                 }
-
-                Divider()
-                    .padding(.vertical, 10)
-
-                Toggle(Localized.string("settings.data.local_only", locale: locale), isOn: $store.settings.keepUsageLocalOnly)
 
                 Divider()
                     .padding(.vertical, 10)
@@ -395,9 +393,9 @@ private struct SettingsCustomDNDTimeRangeSection: View {
                     }
 
                     Text(Localized.string("settings.dnd.times_hint", locale: locale))
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
                 .padding(14)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(
@@ -466,6 +464,55 @@ private struct SettingsSubpageContainer<Content: View>: View {
     }
 }
 
+private struct SettingsInsightCard: View {
+    let icon: String
+    let iconTint: Color
+    let title: String
+    let value: String
+    var subtitle: String?
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: icon)
+                .font(.title2)
+                .foregroundStyle(iconTint)
+                .frame(width: 38, height: 38)
+                .background(iconTint.opacity(0.15), in: RoundedRectangle(cornerRadius: 11, style: .continuous))
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text(title)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Text(value)
+                    .font(.title3.weight(.semibold))
+                    .foregroundStyle(.primary)
+                    .monospacedDigit()
+                    .minimumScaleFactor(0.72)
+                if let subtitle {
+                    Text(subtitle)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, minHeight: 86, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(Color(nsColor: .textBackgroundColor).opacity(0.72))
+                .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 3)
+        )
+        .overlay {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .strokeBorder(Color.primary.opacity(0.06), lineWidth: 1)
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
 // MARK: - 设置 · 任务（导出 + 分类）
 
 private enum TasksSettingsInnerTab: String, CaseIterable, Identifiable {
@@ -489,6 +536,8 @@ private struct SettingsTasksMainPanel: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
+            SettingsTasksInsightBlock(store: store)
+
             Picker(Localized.string("settings.tasks.tab.picker_a11y", locale: locale), selection: $innerTab) {
                 ForEach(TasksSettingsInnerTab.allCases) { tab in
                     Text(Localized.string(tab.localizationKey, locale: locale)).tag(tab)
@@ -513,6 +562,117 @@ private struct SettingsTasksMainPanel: View {
                     }
                 }
                 .animation(.easeInOut(duration: 0.18), value: innerTab)
+            }
+        }
+    }
+}
+
+private struct SettingsTasksInsightBlock: View {
+    @ObservedObject var store: FocusPauseStore
+    @Environment(\.locale) private var locale
+
+    private var doneCount: Int {
+        store.todos.filter(\.isDone).count
+    }
+
+    private var totalCount: Int {
+        store.todos.count
+    }
+
+    private var completionPercent: Int {
+        guard totalCount > 0 else { return 0 }
+        return Int((Double(doneCount) / Double(totalCount) * 100).rounded())
+    }
+
+    private var categoryRows: [(label: String, color: Color, count: Int)] {
+        let defs = store.settings.effectiveTodoCategories
+        var raw: [UUID?: Int] = [:]
+        for todo in store.todos {
+            raw[todo.categoryId, default: 0] += 1
+        }
+        return raw.compactMap { key, count in
+            guard count > 0 else { return nil }
+            switch key {
+            case nil:
+                return (Localized.string("todo.uncategorized", locale: locale), Color.secondary.opacity(0.66), count)
+            case let id?:
+                if let def = defs.first(where: { $0.id == id }) {
+                    return (def.localizedTitle(locale: locale), Color(hex: def.tintHex), count)
+                }
+                return (Localized.string("todo.uncategorized", locale: locale), Color.secondary.opacity(0.72), count)
+            }
+        }
+        .sorted { $0.count > $1.count }
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+                SettingsInsightCard(
+                    icon: "checklist",
+                    iconTint: .blue,
+                    title: Localized.string("settings.tasks.insight.total", locale: locale),
+                    value: "\(totalCount)"
+                )
+                SettingsInsightCard(
+                    icon: "checkmark.circle.fill",
+                    iconTint: .green,
+                    title: Localized.string("settings.tasks.insight.done", locale: locale),
+                    value: "\(doneCount)",
+                    subtitle: "\(completionPercent)%"
+                )
+                SettingsInsightCard(
+                    icon: "tag.fill",
+                    iconTint: .purple,
+                    title: Localized.string("settings.tasks.insight.categories", locale: locale),
+                    value: "\(store.settings.effectiveTodoCategories.count)"
+                )
+            }
+
+            if !categoryRows.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    Label(Localized.string("settings.tasks.insight.category_distribution", locale: locale), systemImage: "chart.bar.xaxis")
+                        .font(.subheadline.weight(.semibold))
+                    SettingsCategoryDistributionBar(rows: categoryRows)
+                        .frame(height: 12)
+                    HStack(spacing: 12) {
+                        ForEach(Array(categoryRows.prefix(4).enumerated()), id: \.offset) { _, row in
+                            HStack(spacing: 5) {
+                                Circle()
+                                    .fill(row.color)
+                                    .frame(width: 8, height: 8)
+                                Text(row.label)
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
+                            }
+                        }
+                    }
+                }
+                .padding(14)
+                .background(Color(nsColor: .textBackgroundColor).opacity(0.5), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .strokeBorder(Color.primary.opacity(0.06), lineWidth: 1)
+                }
+            }
+        }
+    }
+}
+
+private struct SettingsCategoryDistributionBar: View {
+    let rows: [(label: String, color: Color, count: Int)]
+
+    var body: some View {
+        GeometryReader { proxy in
+            let total = max(rows.reduce(0) { $0 + $1.count }, 1)
+            HStack(spacing: 2) {
+                ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .fill(row.color)
+                        .frame(width: max(3, proxy.size.width * CGFloat(row.count) / CGFloat(total)))
+                        .accessibilityLabel("\(row.label) \(row.count)")
+                }
             }
         }
     }
@@ -815,15 +975,17 @@ private struct SettingsTodoExportSelectableRow: View {
 // MARK: - 设置 · 数据管理
 
 private enum DataSettingsInnerTab: String, CaseIterable, Identifiable {
+    case overview
     case usage
-    case settings
+    case lifecycle
 
     var id: String { rawValue }
 
     var localizationKey: String {
         switch self {
+        case .overview: "settings.data.tab.overview"
         case .usage: "settings.data.tab.usage"
-        case .settings: "settings.data.tab.settings"
+        case .lifecycle: "settings.data.tab.lifecycle"
         }
     }
 }
@@ -831,7 +993,7 @@ private enum DataSettingsInnerTab: String, CaseIterable, Identifiable {
 private struct SettingsDataMainPanel: View {
     @ObservedObject var store: FocusPauseStore
     @Environment(\.locale) private var locale
-    @State private var innerTab: DataSettingsInnerTab = .usage
+    @State private var innerTab: DataSettingsInnerTab = .overview
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -845,13 +1007,310 @@ private struct SettingsDataMainPanel: View {
             SettingsSubpageContainer {
                 Group {
                     switch innerTab {
+                    case .overview:
+                        SettingsDataOverviewBlock(store: store)
                     case .usage:
                         SettingsUsageManagementBlock(store: store)
-                    case .settings:
+                    case .lifecycle:
                         SettingsDataSettingsBlock(store: store)
                     }
                 }
                 .animation(.easeInOut(duration: 0.18), value: innerTab)
+            }
+        }
+    }
+}
+
+private struct SettingsDataOverviewBlock: View {
+    @ObservedObject var store: FocusPauseStore
+    @Environment(\.locale) private var locale
+
+    private var weekRange: (start: Date, end: Date) {
+        let r = TodoExportDateBounds.thisWeekNormalizedRange()
+        return TodoExportDateBounds.normalizedExportRange(start: r.start, end: r.end)
+    }
+
+    private var weekTodos: [TodoItem] {
+        let r = weekRange
+        return store.todosInExportWindow(startInclusive: r.start, endInclusive: r.end)
+    }
+
+    private var weekUsageMinutes: Int {
+        let r = weekRange
+        return store.usageManagementDailySections(startDay: r.start, endDay: r.end)
+            .reduce(0) { partial, section in
+                partial + section.1.reduce(0) { $0 + $1.minutes }
+            }
+    }
+
+    private var categoryRows: [(label: String, color: Color, count: Int)] {
+        let defs = store.settings.effectiveTodoCategories
+        var raw: [UUID?: Int] = [:]
+        for todo in store.todos {
+            raw[todo.categoryId, default: 0] += 1
+        }
+        return raw.compactMap { key, count in
+            guard count > 0 else { return nil }
+            switch key {
+            case nil:
+                return (Localized.string("todo.uncategorized", locale: locale), Color.secondary.opacity(0.66), count)
+            case let id?:
+                if let def = defs.first(where: { $0.id == id }) {
+                    return (def.localizedTitle(locale: locale), Color(hex: def.tintHex), count)
+                }
+                return (Localized.string("todo.uncategorized", locale: locale), Color.secondary.opacity(0.72), count)
+            }
+        }
+        .sorted { $0.count > $1.count }
+    }
+
+    private var totalTasksCount: Int {
+        store.todos.count
+    }
+
+    private func formatUsageMinutes(_ minutes: Int) -> String {
+        guard minutes > 0 else {
+            return Localized.string("settings.data.overview.usage_none", locale: locale)
+        }
+        if minutes < 60 {
+            return String(format: Localized.string("format.minutes_suffix", locale: locale), minutes)
+        }
+        let hours = minutes / 60
+        let rest = minutes % 60
+        if rest == 0 {
+            return String(format: Localized.string("settings.data.overview.usage_hours_only", locale: locale), hours)
+        }
+        return String(format: Localized.string("settings.data.overview.usage_hours_minutes", locale: locale), hours, rest)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            Text(Localized.string("settings.data.overview.intro", locale: locale))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+                SettingsInsightCard(
+                    icon: "list.bullet.rectangle.fill",
+                    iconTint: .blue,
+                    title: Localized.string("settings.data.overview.card.week_tasks", locale: locale),
+                    value: "\(weekTodos.count)"
+                )
+                SettingsInsightCard(
+                    icon: "checkmark.circle.fill",
+                    iconTint: .green,
+                    title: Localized.string("settings.data.overview.card.done_week", locale: locale),
+                    value: "\(weekTodos.filter(\.isDone).count)"
+                )
+                SettingsInsightCard(
+                    icon: "hourglass.circle.fill",
+                    iconTint: .orange,
+                    title: Localized.string("settings.data.overview.card.usage_week", locale: locale),
+                    value: formatUsageMinutes(weekUsageMinutes)
+                )
+            }
+
+            categoryDistributionSection
+            weeklyUsageTrendSection
+        }
+    }
+
+    @ViewBuilder
+    private var categoryDistributionSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Label(Localized.string("settings.data.overview.categories_title", locale: locale), systemImage: "chart.pie.fill")
+                .font(.subheadline.weight(.semibold))
+
+            if categoryRows.isEmpty {
+                Text(Localized.string("settings.data.overview.categories_empty", locale: locale))
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+            } else {
+                HStack(alignment: .center, spacing: 20) {
+                    ZStack {
+                        SettingsTodoCategoryDonutCanvas(slices: categoryRows.map { SettingsTodoCategorySlice(color: $0.color, count: $0.count) })
+                            .frame(width: 164, height: 164)
+
+                        VStack(spacing: 2) {
+                            Text("\(totalTasksCount)")
+                                .font(.title2.weight(.bold))
+                                .monospacedDigit()
+                            Text(Localized.string("settings.data.overview.categories_center", locale: locale))
+                                .font(.caption.weight(.medium))
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        .allowsHitTesting(false)
+                    }
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        let sum = Double(categoryRows.reduce(0) { $0 + $1.count })
+                        ForEach(Array(categoryRows.enumerated()), id: \.offset) { _, row in
+                            let pct = sum > 0 ? Int((Double(row.count) / sum * 100).rounded()) : 0
+                            HStack(spacing: 8) {
+                                Circle()
+                                    .fill(row.color)
+                                    .frame(width: 10, height: 10)
+                                Text(row.label)
+                                    .font(.caption)
+                                    .lineLimit(1)
+                                Spacer(minLength: 6)
+                                Text("\(pct)%")
+                                    .font(.caption.monospacedDigit())
+                                    .foregroundStyle(.secondary)
+                            }
+                            .accessibilityLabel("\(row.label), \(pct) percent")
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(14)
+                .background(chartCardBackdrop)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var weeklyUsageTrendSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Label(Localized.string("settings.data.overview.week_usage_spark_title", locale: locale), systemImage: "chart.line.uptrend.xyaxis")
+                .font(.subheadline.weight(.semibold))
+
+            let points = weeklySparkPoints
+            Group {
+                if points.allSatisfy({ $0.minutes == 0 }) {
+                    Text(Localized.string("settings.data.usage.empty", locale: locale))
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.vertical, 28)
+                } else {
+#if canImport(Charts) && !targetEnvironment(macCatalyst)
+                    let yLabel = Localized.string("settings.data.usage.chart.axis_minutes", locale: locale)
+                    Chart(points) { point in
+                        AreaMark(
+                            x: .value("", point.date, unit: .day),
+                            y: .value(yLabel, point.minutes)
+                        )
+                        .interpolationMethod(.catmullRom(alpha: 0.62))
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [Color.accentColor.opacity(0.22), Color.accentColor.opacity(0.02)],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        LineMark(
+                            x: .value("", point.date, unit: .day),
+                            y: .value(yLabel, point.minutes)
+                        )
+                        .interpolationMethod(.catmullRom(alpha: 0.62))
+                        .foregroundStyle(Color.accentColor)
+                    }
+                    .chartYAxis {
+                        AxisMarks(position: .leading)
+                    }
+                    .chartXAxis {
+                        AxisMarks(values: .automatic(desiredCount: 7))
+                    }
+                    .frame(height: 160)
+#else
+                    Text(Localized.string("settings.data.overview.chart_unavailable_catalyst", locale: locale))
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .padding(.vertical, 28)
+#endif
+                }
+            }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 10)
+            .background(chartCardBackdrop)
+        }
+    }
+
+    private var chartCardBackdrop: some View {
+        RoundedRectangle(cornerRadius: 12, style: .continuous)
+            .fill(Color(nsColor: .textBackgroundColor).opacity(0.5))
+            .overlay {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .strokeBorder(Color.primary.opacity(0.07), lineWidth: 1)
+            }
+    }
+
+    private struct WeeklyUsageSparkPoint: Identifiable {
+        let date: Date
+        let minutes: Double
+        var id: Date { date }
+    }
+
+    private var weeklySparkPoints: [WeeklyUsageSparkPoint] {
+        let raw = TodoExportDateBounds.thisWeekNormalizedRange()
+        let range = TodoExportDateBounds.normalizedExportRange(start: raw.start, end: raw.end)
+        let sections = store.usageManagementDailySections(startDay: range.start, endDay: range.end)
+        var byDay: [Date: Int] = [:]
+        let calendar = Calendar.current
+
+        for (day, items) in sections {
+            let normalized = calendar.startOfDay(for: day)
+            byDay[normalized, default: 0] += items.reduce(0) { $0 + $1.minutes }
+        }
+
+        var output: [WeeklyUsageSparkPoint] = []
+        var cursor = range.start
+        while cursor <= range.end {
+            let day = calendar.startOfDay(for: cursor)
+            output.append(WeeklyUsageSparkPoint(date: day, minutes: Double(byDay[day] ?? 0)))
+            guard let next = calendar.date(byAdding: .day, value: 1, to: cursor) else { break }
+            cursor = next
+        }
+        return output
+    }
+}
+
+private struct SettingsTodoCategorySlice {
+    var color: Color
+    var count: Int
+}
+
+private struct SettingsTodoCategoryDonutCanvas: View {
+    var slices: [SettingsTodoCategorySlice]
+
+    var body: some View {
+        Canvas { context, size in
+            let total = slices.reduce(0) { $0 + $1.count }
+            guard total > 0, size.width > 2, size.height > 2 else { return }
+
+            let center = CGPoint(x: size.width / 2, y: size.height / 2)
+            let outerRadius = min(size.width, size.height) / 2 - 1
+            let innerRadius = outerRadius * 0.58
+            var start = -CGFloat.pi / 2
+
+            for slice in slices {
+                let sweep = CGFloat(slice.count) / CGFloat(total) * 2 * CGFloat.pi
+                let end = start + sweep
+
+                var path = Path()
+                path.move(to: CGPoint(x: center.x + outerRadius * cos(start), y: center.y + outerRadius * sin(start)))
+                path.addArc(
+                    center: center,
+                    radius: outerRadius,
+                    startAngle: Angle(radians: Double(start)),
+                    endAngle: Angle(radians: Double(end)),
+                    clockwise: false
+                )
+                path.addLine(to: CGPoint(x: center.x + innerRadius * cos(end), y: center.y + innerRadius * sin(end)))
+                path.addArc(
+                    center: center,
+                    radius: innerRadius,
+                    startAngle: Angle(radians: Double(end)),
+                    endAngle: Angle(radians: Double(start)),
+                    clockwise: true
+                )
+                path.closeSubpath()
+
+                context.fill(path, with: .color(slice.color))
+                context.stroke(path, with: .color(Color(nsColor: .textBackgroundColor).opacity(0.35)), lineWidth: 1)
+                start = end
             }
         }
     }
@@ -916,6 +1375,12 @@ private struct SettingsUsageManagementBlock: View {
                 )
             }
 
+#if canImport(Charts) && !targetEnvironment(macCatalyst)
+            if !usageSections.isEmpty {
+                usageTrendChartSection
+            }
+#endif
+
             Text(Localized.string("settings.data.usage.list_title", locale: locale))
                 .font(.subheadline.weight(.semibold))
 
@@ -958,6 +1423,66 @@ private struct SettingsUsageManagementBlock: View {
             }
         }
     }
+
+#if canImport(Charts) && !targetEnvironment(macCatalyst)
+    private struct UsageTrendPoint: Identifiable {
+        let date: Date
+        let minutes: Double
+        var id: Date { date }
+    }
+
+    private var usageTrendPoints: [UsageTrendPoint] {
+        usageSections
+            .map { day, items in
+                UsageTrendPoint(date: day, minutes: Double(items.reduce(0) { $0 + $1.minutes }))
+            }
+            .sorted { $0.date < $1.date }
+    }
+
+    @ViewBuilder
+    private var usageTrendChartSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Label(Localized.string("settings.data.usage.chart.title", locale: locale), systemImage: "chart.line.uptrend.xyaxis")
+                .font(.subheadline.weight(.semibold))
+
+            let yLabel = Localized.string("settings.data.usage.chart.axis_minutes", locale: locale)
+            Chart(usageTrendPoints) { point in
+                BarMark(
+                    x: .value("", point.date, unit: .day),
+                    y: .value(yLabel, point.minutes)
+                )
+                .foregroundStyle(Color.accentColor.opacity(0.22))
+
+                LineMark(
+                    x: .value("", point.date, unit: .day),
+                    y: .value(yLabel, point.minutes)
+                )
+                .interpolationMethod(.catmullRom(alpha: 0.62))
+                .foregroundStyle(Color.accentColor)
+
+                PointMark(
+                    x: .value("", point.date, unit: .day),
+                    y: .value(yLabel, point.minutes)
+                )
+                .foregroundStyle(Color.accentColor)
+            }
+            .chartYAxis {
+                AxisMarks(position: .leading)
+            }
+            .chartXAxis {
+                AxisMarks(values: .automatic(desiredCount: 7))
+            }
+            .frame(height: 180)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 10)
+            .background(Color(nsColor: .textBackgroundColor).opacity(0.55), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .strokeBorder(Color.primary.opacity(0.08), lineWidth: 1)
+            }
+        }
+    }
+#endif
 }
 
 private struct SettingsUsageManagementRow: View {
@@ -1050,7 +1575,23 @@ private struct SettingsDataSettingsBlock: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 10) {
+                Toggle(Localized.string("settings.data.local_only", locale: locale), isOn: $store.settings.keepUsageLocalOnly)
+                Text(Localized.string("settings.data.lifecycle.local_only_hint", locale: locale))
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+
+            Divider()
+
+            Label(Localized.string("settings.data.lifecycle.cleanup_header", locale: locale), systemImage: "clock.badge.exclamationmark.fill")
+                .font(.headline)
+            Text(Localized.string("settings.data.lifecycle.cleanup_hint", locale: locale))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+
             dataRetentionRow(
+                icon: "checklist.checked",
                 titleKey: "settings.data.row.todos.title",
                 bracket: $todoRetentionBracket,
                 onCommit: { cleanupConfirm = .clearTodos(todoRetentionBracket) }
@@ -1059,6 +1600,7 @@ private struct SettingsDataSettingsBlock: View {
             Divider()
 
             dataRetentionRow(
+                icon: "chart.bar.doc.horizontal",
                 titleKey: "settings.data.row.usage.title",
                 bracket: $usageRetentionBracket,
                 onCommit: { cleanupConfirm = .clearUsage(usageRetentionBracket) }
@@ -1070,6 +1612,9 @@ private struct SettingsDataSettingsBlock: View {
                 cleanupConfirm = .clearAllTodosAndUsage
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            Text(Localized.string("settings.data.cleanup.all.footer", locale: locale))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
         }
         .alert(
             Localized.string("settings.data.confirm.title", locale: locale),
@@ -1105,12 +1650,17 @@ private struct SettingsDataSettingsBlock: View {
     }
 
     @ViewBuilder
-    private func dataRetentionRow(titleKey: String, bracket: Binding<DataRetentionAgeBracket>, onCommit: @escaping () -> Void) -> some View {
+    private func dataRetentionRow(icon: String, titleKey: String, bracket: Binding<DataRetentionAgeBracket>, onCommit: @escaping () -> Void) -> some View {
         HStack(alignment: .center, spacing: 14) {
-            Text(Localized.string(titleKey, locale: locale))
-                .font(.body)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            Label {
+                Text(Localized.string(titleKey, locale: locale))
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+            } icon: {
+                Image(systemName: icon)
+                    .foregroundStyle(Color.accentColor)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             Picker(Localized.string("settings.data.retention.picker.a11y", locale: locale), selection: bracket) {
                 ForEach(DataRetentionAgeBracket.allCases) { b in
@@ -1203,29 +1753,11 @@ private struct SettingsTodoCategoriesEditor: View {
         VStack(alignment: .leading, spacing: 14) {
             ForEach(draft) { category in
                 HStack(alignment: .center, spacing: 12) {
-                    Menu {
-                        ForEach(TodoCategoryDefinition.presetTintHexes, id: \.self) { hex in
-                            Button {
-                                setTint(hex, for: category.id)
-                            } label: {
-                                HStack(spacing: 8) {
-                                    Circle()
-                                        .fill(Color(hex: hex))
-                                        .frame(width: 14, height: 14)
-                                    Text(hex)
-                                        .font(.caption.monospaced())
-                                }
-                            }
-                        }
-                    } label: {
-                        Circle()
-                            .fill(Color(hex: category.tintHex))
-                            .frame(width: 22, height: 22)
-                            .overlay(Circle().stroke(Color.primary.opacity(0.12), lineWidth: 1))
-                    }
-                    .menuStyle(.borderlessButton)
-                    .buttonStyle(.plain)
-                    .help(Localized.string("todo.cat.pick_color", locale: locale))
+                    Circle()
+                        .fill(Color(hex: category.tintHex))
+                        .frame(width: 22, height: 22)
+                        .overlay(Circle().stroke(Color.primary.opacity(0.12), lineWidth: 1))
+                        .accessibilityHidden(true)
 
                     TextField(Localized.string("todo.cat.name_placeholder", locale: locale), text: titleBinding(for: category.id))
                         .textFieldStyle(.roundedBorder)
@@ -1304,11 +1836,6 @@ private struct SettingsTodoCategoriesEditor: View {
                 draft[i].title = new
             }
         )
-    }
-
-    private func setTint(_ hex: String, for id: UUID) {
-        guard let i = draft.firstIndex(where: { $0.id == id }) else { return }
-        draft[i].tintHex = hex
     }
 
     private func removeCategory(id: UUID) {
